@@ -82,7 +82,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "markdown-it-center-text": "^1.0.4",
-    "minimist": "^0.2.1",
+    "minimist": "^1.2.3",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-nprogress": "^1.1.6",
     "vuepress-plugin-redirect": "^1.2.3",
