@@ -57,18 +57,6 @@ export const routes = [
     redirect: "/posts/2019/02/26/theme-guide-zh.html"
   },
   {
-    name: "v-0584b69e",
-    path: "/posts/2019/03/22/header-config-zh.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Post", "v-0584b69e").then(next)
-    },
-  },
-  {
-    path: "/_posts/2019-03-22-header-config-zh.html",
-    redirect: "/posts/2019/03/22/header-config-zh.html"
-  },
-  {
     name: "v-f2833ec0",
     path: "/posts/2019/02/27/theme-guide-en.html",
     component: GlobalLayout,
@@ -79,6 +67,18 @@ export const routes = [
   {
     path: "/_posts/2019-02-27-theme-guide-en.html",
     redirect: "/posts/2019/02/27/theme-guide-en.html"
+  },
+  {
+    name: "v-0584b69e",
+    path: "/posts/2019/03/22/header-config-zh.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Post", "v-0584b69e").then(next)
+    },
+  },
+  {
+    path: "/_posts/2019-03-22-header-config-zh.html",
+    redirect: "/posts/2019/03/22/header-config-zh.html"
   },
   {
     name: "v-c03ea92c",
@@ -163,6 +163,33 @@ export const routes = [
   {
     path: "/posts/categories/index.html",
     redirect: "/posts/categories/"
+  },
+  {
+    name: "v-cee70e46",
+    path: "/posts/tags/ja.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Tag", "v-cee70e46").then(next)
+    },
+    meta: {"tagName":"ja"}
+  },
+  {
+    name: "v-210b50ee",
+    path: "/posts/tags/Steam.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Tag", "v-210b50ee").then(next)
+    },
+    meta: {"tagName":"Steam"}
+  },
+  {
+    name: "v-f9a86400",
+    path: "/posts/tags/archlinux.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Tag", "v-f9a86400").then(next)
+    },
+    meta: {"tagName":"archlinux"}
   },
   {
     name: "v-b3875eaa",

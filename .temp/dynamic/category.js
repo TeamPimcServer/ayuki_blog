@@ -14,8 +14,8 @@ export default {
     "path": "/posts/categories/docs.html",
     "pageKeys": [
       "v-433601d4",
-      "v-0584b69e",
       "v-f2833ec0",
+      "v-0584b69e",
       "v-c03ea92c"
     ]
   },

@@ -10,7 +10,6 @@ import m8 from "/home/yupix/Desktop/Github/ayuki_blog/.temp/app-enhancers/6.js"
 import m9 from "/home/yupix/Desktop/Github/ayuki_blog/.temp/app-enhancers/7.js"
 import m10 from "/home/yupix/Desktop/Github/ayuki_blog/.temp/app-enhancers/plugin-table-of-contents.js"
 import m11 from "/home/yupix/Desktop/Github/ayuki_blog/.temp/app-enhancers/8.js"
-import m12 from "/home/yupix/Desktop/Github/ayuki_blog/.temp/app-enhancers/9.js"
 
 export default [
   m0,
@@ -24,6 +23,5 @@ export default [
   m8,
   m9,
   m10,
-  m11,
-  m12
+  m11
 ]

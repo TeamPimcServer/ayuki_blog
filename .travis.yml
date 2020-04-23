@@ -1,0 +1,31 @@
+#TODO: 調べます・・・(aki)
+language: node_js
+node_js:
+  - "12"
+
+cache:
+  directories:
+    - "node_modules"
+
+branches:
+  only:
+  - master
+
+install:
+  - yarn install
+  #- yarn run generate
+
+script:
+  - echo "Skipping tests"
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: cyr+GAJ3E0V7oS14vt3yJQ03jQB47SqdAFBBPNltri+7tJFRqcLEp6VJm+IL5RIPLZaXAnfdBaBGZu+Dor6tc3L5mppP7zrIwm7xV76T7kr42XNRvC4a9OS4mCNExoWylvFk1lnrDmdDwYC6OAs5uqKc0t1HU/Ow5B9DKQFapIK4BuFo4RUryn3kxrWoXwUO1bxC8sTcoupRDa54BrONuSQhLzU3Yfnlmm6HhOE0sTtM3pOnOtVXTtEHwCTqyT7qwEnpy2vUW/glNJFh1bPpWjNjSvUIiWc/qJm0oTI2CfEhY/efW4VukOIZXhwPbNORGwIwkIEzK4e+3I1zxhHk0ckVkpYkrAhDGV4yjxG7ItBgkZMqun7w/d/y22jeHgQZNNJ24h60U9Bejdk16ZvJB2vqqPSuKsIo2xbp45zS1v8uhFumorRI8H4T4NsMDzIsPFXKiwn8N1k5fbFJaD5ookISUWLoEzvSnYYzmnLVyMAcZXRu9HEb2a+wHiv0fEyHBGV6ijwaG4C49a9e/M8zRugEJJ5c+h+vo8DKppR0DBROs6NyzYSfq0QTPCrUVg9+/qoNLJBN7GN5LcXF3rttwCDkIpTkZnoxI3Grb5sbi3NCZ83XTvcnYCDrkruXTLUjuByJ2EtvXbo32tuqua3WSPm64sseA26dW76ItRcnIMc=  # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  target-branch: gh-pages
+  local-dir: dist
+  on:
+    branch: master
+
+notifications:
+  email: false

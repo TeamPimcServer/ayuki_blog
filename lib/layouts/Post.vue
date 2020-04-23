@@ -8,9 +8,11 @@
         class="post-content content"
       />
     </article>
+    <article class="main-div">
+        <a class="text-center">こん</a>
+    </article>
 
     <PostMeta v-if="meta" />
-
     <div
       v-if="vssue"
       id="post-comments"

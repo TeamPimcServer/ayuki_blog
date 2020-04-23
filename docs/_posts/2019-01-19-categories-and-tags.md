@@ -1,7 +1,9 @@
 ---
 category: demo
 tags:
-  - en
+  - ja
+  - Steam
+  - archlinux
 date: 2019-01-19
 title: Categories and Tags
 vssue-id: 10
