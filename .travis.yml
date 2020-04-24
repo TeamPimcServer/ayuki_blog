@@ -9,7 +9,7 @@ cache:
 
 branches:
   only:
-  - master
+    - master
 
 install:
   - yarn install
@@ -19,15 +19,17 @@ script:
   - echo "Skipping tests"
 
 deploy:
-  env:
-    - secure: "IQQtxvAtOwo2ibrvoc3VT2HSHdtfXCsPRZXtsdW8HijoA8A7u4mAWF8TOZf6sau8shFYqzsQUl0l5/Tmb/3psnzRJKZLmRjKuZX94HyHdNs9PaPW/4QqFjTPujneDhraGH1pCDHxvnq1wUkZQWAj8t7dpuhHQbOIY0Rmar45gruNDpnAvlSHkwGtEh8IwkRX8nsTcocb0yWfEcAu+cAIhWpeojSYHgHpkKq0MH5ReIjpnvCRfayDKYJYNiZGtfHCeMOH6OvXA0zN2LXdo5sC4bqq9DkPc7A5nUDFY0pNIYYTO49RK+A7e3gvPIQHZUti/S6ecAbrEcTO5jU2QDRw5KQoV0djxtCV/gQV7nuMfT7Z+9gqZOJDXuwMGxtAmgnmlEkppKlTbXClE1PHYeWvJFG5rFsih2qRj/Q0GGZbwdWVC/BOTCzOt1Hm09hkv1l26pIIdYVaekUOSTUu0FGaqrNd1NbO6NocC8KB/ASRmx6OEl4IIGzaY3yaowNNfIWvX4Ok70+d+sZZC1jZx5oAho9UdgPb6LPECWq9f4vwrEksVsXdAobDmobC6zKYeqqlzFh/sP6iM20rt5P2ZDTTRgwIlv35qOxgSMXhjhMDc/AfOi9O6pHrtfqjZRy02s0Bk5/Mc5mWqExLEfJw6obIMbA4VchQs6gHFGRfC9Sh5NY="
   provider: pages
   skip-cleanup: true
-  github-token: $GT_TOKEN  # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: $GT_TOKEN # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   target-branch: gh-pages
   local-dir: docs-dist
   on:
     branch: master
+
+env:
+  global:
+    - secure: "IQQtxvAtOwo2ibrvoc3VT2HSHdtfXCsPRZXtsdW8HijoA8A7u4mAWF8TOZf6sau8shFYqzsQUl0l5/Tmb/3psnzRJKZLmRjKuZX94HyHdNs9PaPW/4QqFjTPujneDhraGH1pCDHxvnq1wUkZQWAj8t7dpuhHQbOIY0Rmar45gruNDpnAvlSHkwGtEh8IwkRX8nsTcocb0yWfEcAu+cAIhWpeojSYHgHpkKq0MH5ReIjpnvCRfayDKYJYNiZGtfHCeMOH6OvXA0zN2LXdo5sC4bqq9DkPc7A5nUDFY0pNIYYTO49RK+A7e3gvPIQHZUti/S6ecAbrEcTO5jU2QDRw5KQoV0djxtCV/gQV7nuMfT7Z+9gqZOJDXuwMGxtAmgnmlEkppKlTbXClE1PHYeWvJFG5rFsih2qRj/Q0GGZbwdWVC/BOTCzOt1Hm09hkv1l26pIIdYVaekUOSTUu0FGaqrNd1NbO6NocC8KB/ASRmx6OEl4IIGzaY3yaowNNfIWvX4Ok70+d+sZZC1jZx5oAho9UdgPb6LPECWq9f4vwrEksVsXdAobDmobC6zKYeqqlzFh/sP6iM20rt5P2ZDTTRgwIlv35qOxgSMXhjhMDc/AfOi9O6pHrtfqjZRy02s0Bk5/Mc5mWqExLEfJw6obIMbA4VchQs6gHFGRfC9Sh5NY="
 
 notifications:
   email: false
