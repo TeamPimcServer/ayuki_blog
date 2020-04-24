@@ -1,1 +1,0 @@
-export default ({ Vue }) => Vue.component("TOC", () => import("/home/yupix/Desktop/Github/ayuki_blog/node_modules/vuepress-plugin-table-of-contents/lib/components/TableOfContents"))
