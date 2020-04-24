@@ -44,6 +44,15 @@
             {{ organization }}
           </IconInfo>
         </section>
+        <section v-if="organization2">
+          <IconInfo
+            class="info-organization2"
+            type="organization"
+            :title="organization2"
+          >
+            {{ organization2 }}
+          </IconInfo>
+        </section>
 
         <section v-if="email">
           <IconInfo
@@ -118,7 +127,9 @@ export default {
     organization () {
       return this.info.organization || null
     },
-
+    organization2 () {
+      return this.info.organization2 || null
+    },
     avatar () {
       return this.info.avatar || '/assets/img/avatar_unknown.jpg'
     },

@@ -12,6 +12,7 @@ module.exports = {
   },
 
   evergreen: true,
+  plugins: ['@vuepress/pwa'],
   /*
   plugins: [
     ['@vuepress/google-analytics', {
@@ -43,17 +44,22 @@ module.exports = {
 
   theme: path.resolve(__dirname, '../../lib'),
 
+  head: [
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+  ],
+
   themeConfig: {
     lang: 'ja-JP',
 
     personalInfo: {
       nickname: 'ゆぴ & あき',
-      description: 'Happy Coding<br/>Happy Life',
-      email: 'meteor.lxy@foxmail.com',
-      location: 'Shenzhen, China',
-      organization: 'Tencent',
+      description: '<br/>t',
+      email: 'teampimcserver@gmail.com',
+      location: 'Japan',
+      organization: 'Team PimcServer',
+      organization2: 'Team OrangeServer',
 
-      avatar: 'https://repo.akarinext.org/assets/image/twin_icon.png',
+      avatar: 'https://repo.akarinext.org/assets/image/twin_icon.webp',
 
       sns: {
         github: {
@@ -95,7 +101,7 @@ module.exports = {
       { text: 'Posts', link: '/posts/', exact: false },
       { text: 'Custom Pages', link: '/custom-pages/', exact: false },
       { text: 'Changelog', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy/blob/master/CHANGELOG.md' },
-      { text: 'Github', link: 'https://github.com/TeamPimcServer' },
+      { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
     ],
 
     comments: {

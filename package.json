@@ -16,7 +16,7 @@
     "url": "git+https://github.com/meteorlxy/vuepress-theme-meteorlxy.git"
   },
   "license": "MIT",
-  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "author": "TeamPimcServer <teampimcserver@gmail.com>",
   "main": "lib/index.js",
   "files": [
     "lib/"
@@ -82,7 +82,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "markdown-it-center-text": "^1.0.4",
-    "minimist": "^0.2.1",
+    "minimist": "^1.2.3",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-nprogress": "^1.1.6",
     "vuepress-plugin-redirect": "^1.2.3",
@@ -94,6 +94,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@vuepress/plugin-pwa": "^1.4.1",
     "conventional-changelog-cli": "^2.0.21",
     "eslint": "^6.3.0",
     "eslint-config-standard": "^14.1.0",
