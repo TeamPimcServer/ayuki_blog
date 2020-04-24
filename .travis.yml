@@ -1,4 +1,3 @@
-#TODO: 調べます・・・(aki)
 language: node_js
 node_js:
   - "12"
@@ -13,17 +12,17 @@ branches:
 
 install:
   - yarn install
-  - yarn run build
 
 script:
-  - echo "Skipping tests"
+  - yarn run build
 
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GT_TOKEN # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
-  target-branch: gh-pages
-  local-dir: docs-dist
+  skip_cleanup: true
+  github_token: $GT_TOKEN # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  target_branch: gh-pages
+  local_dir: docs-dist
+  keep_history: true
   on:
     branch: master
 
