@@ -13,7 +13,7 @@ branches:
 
 install:
   - yarn install
-  #- yarn run generate
+  - yarn run build
 
 script:
   - echo "Skipping tests"
@@ -21,11 +21,16 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: cyr+GAJ3E0V7oS14vt3yJQ03jQB47SqdAFBBPNltri+7tJFRqcLEp6VJm+IL5RIPLZaXAnfdBaBGZu+Dor6tc3L5mppP7zrIwm7xV76T7kr42XNRvC4a9OS4mCNExoWylvFk1lnrDmdDwYC6OAs5uqKc0t1HU/Ow5B9DKQFapIK4BuFo4RUryn3kxrWoXwUO1bxC8sTcoupRDa54BrONuSQhLzU3Yfnlmm6HhOE0sTtM3pOnOtVXTtEHwCTqyT7qwEnpy2vUW/glNJFh1bPpWjNjSvUIiWc/qJm0oTI2CfEhY/efW4VukOIZXhwPbNORGwIwkIEzK4e+3I1zxhHk0ckVkpYkrAhDGV4yjxG7ItBgkZMqun7w/d/y22jeHgQZNNJ24h60U9Bejdk16ZvJB2vqqPSuKsIo2xbp45zS1v8uhFumorRI8H4T4NsMDzIsPFXKiwn8N1k5fbFJaD5ookISUWLoEzvSnYYzmnLVyMAcZXRu9HEb2a+wHiv0fEyHBGV6ijwaG4C49a9e/M8zRugEJJ5c+h+vo8DKppR0DBROs6NyzYSfq0QTPCrUVg9+/qoNLJBN7GN5LcXF3rttwCDkIpTkZnoxI3Grb5sbi3NCZ83XTvcnYCDrkruXTLUjuByJ2EtvXbo32tuqua3WSPm64sseA26dW76ItRcnIMc=  # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: cyr+GAJ3E0V7oS14vt3yJQ03jQB47SqdAFBBPNltri+7tJFRqcLEp6VJm+IL5RIPLZaXAnfdBaBGZu+Dor6tc3L5mppP7zrIwm7xV76T7kr42XNRvC4a9OS4mCNExoWylvFk1lnrDmdDwYC6OAs5uqKc0t1HU/Ow5B9DKQFapIK4BuFo4RUryn3kxrWoXwUO1bxC8sTcoupRDa54BrONuSQhLzU3Yfnlmm6HhOE0sTtM3pOnOtVXTtEHwCTqyT7qwEnpy2vUW/glNJFh1bPpWjNjSvUIiWc/qJm0oTI2CfEhY/efW4VukOIZXhwPbNORGwIwkIEzK4e+3I1zxhHk0ckVkpYkrAhDGV4yjxG7ItBgkZMqun7w/d/y22jeHgQZNNJ24h60U9Bejdk16ZvJB2vqqPSuKsIo2xbp45zS1v8uhFumorRI8H4T4NsMDzIsPFXKiwn8N1k5fbFJaD5ookISUWLoEzvSnYYzmnLVyMAcZXRu9HEb2a+wHiv0fEyHBGV6ijwaG4C49a9e/M8zRugEJJ5c+h+vo8DKppR0DBROs6NyzYSfq0QTPCrUVg9+/qoNLJBN7GN5LcXF3rttwCDkIpTkZnoxI3Grb5sbi3NCZ83XTvcnYCDrkruXTLUjuByJ2EtvXbo32tuqua3WSPm64sseA26dW76ItRcnIMc=
+
   target-branch: gh-pages
-  local-dir: dist
+  local-dir: docs-dist
   on:
     branch: master
 
 notifications:
   email: false
+
+  env:
+  global:
+    secure: iFUQAJvuZZ6OuBKjIJuq6ovrPdz8S2iNmNEnch1/wTbLeemwR2fH0AZ8wmbCmYC6Rz+k99YCjKHU++gL3dola+cN6yShDttr00xZz7zBe/6MBEc/lJxUAXGTcAk0wPLdY0/Ammzg0aX5Aa9eqAi5Gl3OpZR5QV0aKLtJi2WzlBWeIYBrn9zfUv44CDgJ02tDEO2+FkNSly502DFqmdnJrBWc5a6+1ISlhzT+A7ypwgGvEzJe1Tb26qF+P1Ew/fwLAFAgdM1ll0zplyx6AeG5MYmc8kRLQymqtrahy5rpbVEb+9scKT/PxoTVTlQbhGYBI3rg46vSaQAz47B7Df98iDy53S4+M4Ov0qU03W+wokca9B4d0o5UqSezQH/6xejZ1UUlXsW2einsPwu53sLPKMXvs5enaMNKRzH+dxI+p55ibH6V1ks0+ruotZ8/omH+kOB533J09oLICM/utxSGY5zuesnuyNADJSBZ/qC/CZpFFZ2s2LmeMB70ga/zo0Sfw08Rup62U5FqX5jn8Q6lBIS7DMyTtkzs833WpyHyVL5+HTdg5ynhAnU8MAnImvhQvTu0jPyVZ/u6+YUKHRHeiT4VuwIYjDvC3lUMQAK15hXA3xQOIiypsIrplZ6LSblZIF4gy9LuR7q+W5Kn5dE9exohIJdjtxKNY85ocVlgHQM=
