@@ -53,7 +53,7 @@ module.exports = {
 
     personalInfo: {
       nickname: 'ゆぴ & あき',
-      description: '<br/>t',
+      description: '主にMinecraftサーバーを運営しています。',
       email: 'teampimcserver@gmail.com',
       location: 'Japan',
       organization: 'Team PimcServer',
@@ -64,11 +64,7 @@ module.exports = {
       sns: {
         github: {
           account: 'meteorlxy',
-          link: 'https://github.com/meteorlxy',
-        },
-        facebook: {
-          account: 'meteorlxy.cn',
-          link: 'https://www.facebook.com/meteorlxy.cn',
+          link: 'https://github.com/TeamPimcServer',
         },
       },
     },
@@ -99,9 +95,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false },
-      { text: 'Custom Pages', link: '/custom-pages/', exact: false },
-      { text: 'Changelog', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy/blob/master/CHANGELOG.md' },
-      { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
+      { text: 'このサイトについて', link: '/aboutsite/', exact: false },
     ],
 
     comments: {

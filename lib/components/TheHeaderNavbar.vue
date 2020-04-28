@@ -125,9 +125,7 @@ $lineHeight = $navbarHeight - ($gutter * 2)
   height $navbarHeight
   line-height $lineHeight
   padding $gutter $gutter * 2
-  border-bottom 1px solid $borderColor
-  color $textColor
-  background-color alpha($navbarColor, 0.8)
+  color $whiteTextColor
   transition all 0.5s ease-out
   &.fixed
     position fixed
@@ -135,15 +133,19 @@ $lineHeight = $navbarHeight - ($gutter * 2)
     @media (max-width $MQMobile - 1px)
       .navbar-links
         background-color $navbarColor
+        color $textColor
   .navbar-site-name
     display inline-block
     position relative
     font-size 1.2rem
     font-weight 600
-    color $accentColor
-    max-width 'calc(100% - %s)' % $lineHeight
-    max-height $lineHeight
-    overflow hidden
+    color $whiteTextColor
+  &.fixed
+    .navbar-site-name
+      color $textColor
+      max-width 'calc(100% - %s)' % $lineHeight
+      max-height $lineHeight
+      overflow hidden
   .navbar-toggler
     float right
     cursor pointer
@@ -154,11 +156,14 @@ $lineHeight = $navbarHeight - ($gutter * 2)
     text-align center
     z-index 100
     .icon
-      fill $accentColor
+      fill $whiteTextColor
     @media (max-width $MQMobile - 1px)
       display inline
     @media (min-width $MQMobile)
       display none
+  &.fixed
+    .icon
+      fill $textColor
   .navbar-links
     @media (max-width $MQMobile - 1px)
       &.show
@@ -181,9 +186,7 @@ $lineHeight = $navbarHeight - ($gutter * 2)
       line-height $lineHeight
       list-style none
   .navbar-link
-    color $textColor
-    transition all 0.3s
-    border-bottom 2px solid transparent
+    color $whiteTextColor
     &:hover
     &.router-link-active
       border-bottom 2px solid $accentColor
@@ -195,4 +198,18 @@ $lineHeight = $navbarHeight - ($gutter * 2)
       padding 0 0.25rem
       margin-left 1rem
       margin-bottom -10px
+  &.fixed
+    .navbar-link
+      color $textColor
+      &:hover
+      &.router-link-active
+        border-bottom 2px solid $accentColor
+      @media (max-width $MQMobile - 1px)
+        display block
+      @media (min-width $MQMobile)
+        display inline-block
+        height 100%
+        padding 0 0.25rem
+        margin-left 1rem
+        margin-bottom -10px
 </style>

@@ -1,5 +1,5 @@
 ---
-layout: CustomPages
+layout: aboutsite
 title: Reference - Custom Pages
 aside: false
 ---
@@ -29,7 +29,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false },
-      { text: 'Custom Pages', link: '/custom-pages/', exact: false },
+      { text: 'このサイトについて', link: '/aboutsite/', exact: false },
     ],
   },
 }

@@ -1,5 +1,6 @@
 @require '~@theme/styles/variables'
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
 .container
   margin 0 auto
@@ -42,16 +43,28 @@
 .auther-line
   text-align: center;
   border-right: dashed 3px #e0e0e0;
+  border-left: dashed 3px #e0e0e0;
   height: 100%;
-  width:80%;
+  width:100%;
+  border-radius:2.5em;
 
 .auther-box-shadow
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 
+.main,
+.side
+  border-radius: 10px
+
 .auther-grid
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr 2fr;
+
+@media(max-width: 400px)
+  .auther-grid
+    grid-template-columns: 1fr;
+
+.auther-main
+  padding:1em;
 
 .auther-icon
   border-radius:15px;
@@ -74,24 +87,33 @@
 .balloon1 {
   position: relative;
   display: inline-block;
-  margin: 1.5em 0;
-  padding: 7px 10px;
-  min-width: 120px;
+  margin: 0em 0em  1em 0em;
+  padding: 5px 10px;
   max-width: 100%;
   color: #555;
   font-size: 16px;
   background: #e0edff;
+  border-radius:25em;
+}
+.yx-background-color-discord {
+  background-color:#7289DA;
+}
+
+#button
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em 1.5em 0.25em 1.5em;
+  border: solid 4px #7389DA;
+  color:white;
   border-radius:1em;
+  transition:1s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
-.balloon1:before {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: 10px;
-  border: 15px solid transparent;
-  border-top: 15px solid #e0edff;
-}
-.balloon1 p {
-  margin: 0;
-  padding: 0;
+.button:hover {
+  display: inline-block;
+  padding: 0.25em 1.5em 0.25em 1.5em;
+  /*border: solid 4px black;*/
+  border-radius:1em;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.40);
 }
