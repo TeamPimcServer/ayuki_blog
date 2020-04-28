@@ -50,7 +50,7 @@ sudo pacman -S steam
   </article>
   <section class="auther-main">
     <div class="auther-main">
-      本サイトでのテンプレートのデザインに手を加えたり、独自のデザインを追加している人で  す。主にMinecraftServerを運営しています
+      本サイトでのテンプレートのデザインに手を加えたり、独自のデザインを追加している人です。主にMinecraftServerを運営しています
     </div>
   </section>
 </div>

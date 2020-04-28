@@ -125,7 +125,7 @@ $lineHeight = $navbarHeight - ($gutter * 2)
   height $navbarHeight
   line-height $lineHeight
   padding $gutter $gutter * 2
-  color $whiteTextColor
+  color $textColor
   transition all 0.5s ease-out
   &.fixed
     position fixed
@@ -191,6 +191,7 @@ $lineHeight = $navbarHeight - ($gutter * 2)
     &.router-link-active
       border-bottom 2px solid $accentColor
     @media (max-width $MQMobile - 1px)
+      color $textColor
       display block
     @media (min-width $MQMobile)
       display inline-block
