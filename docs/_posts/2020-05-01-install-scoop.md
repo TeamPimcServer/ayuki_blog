@@ -31,7 +31,9 @@ sudo回で使ってる``scoop``を入れます。~~投稿順序逆だね~~
 - PowerShell (^5) または PowerShell Core
 - .Net Framework (^4.5)
 
+::: tip
 サポート中のWindowsなら問題ないはずです。
+:::
 
 ## インストール
 
@@ -58,6 +60,10 @@ scoop install git
 追加でjavaやphpなどのbucket(scoopでのリポジトリ)もあるので追加することが可能です。
 
 じゃんじゃん使っていこうね～
+
+::: tip
+もしかすると、応用編も出るかもしれません。
+:::
 
 ~~投稿順序はGitHub行かないと基本的にはバレない~~
 

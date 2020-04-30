@@ -85,6 +85,22 @@ sudo choco install windows-terminal
 sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
+::: warning
+何も気にせずに乱用してはいけません。
+
+ウイルス等の感染の原因になります。
+:::
+
+::: danger
+``rm``や``rd``(及び``rmdir``)などのファイルを削除するコマンドに対して``C:\``や``/``を指定してはいけません。(OSや個人データをを破壊する可能性があります。)
+:::
+
+## 最後に
+
+root(管理者)権限なので扱いには気をつけましょう。
+
+Linuxやmacを使っているあなたもですよ？
+
 <div class="auther-grid">
   <article class="auther-side">
     <div class="auther-line">
