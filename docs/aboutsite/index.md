@@ -1,6 +1,6 @@
 ---
 layout: aboutsite
-title: Reference - Custom Pages
+title: このサイトについて
 aside: false
 ---
 ## 本サイトについて
