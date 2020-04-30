@@ -4,7 +4,7 @@ category: 一般
 tags:
   - ja
   - 自己紹介
-date: 2019-04-24
+date: 2020-04-24
 title: 初めてのyupix
 vssue-id: 10
 ---

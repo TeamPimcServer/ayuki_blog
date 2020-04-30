@@ -6,7 +6,7 @@ tags:
   - archlinux
   - steam
   - 解説
-date: 2019-04-24
+date: 2020-04-24
 title: ArchLinuxにSteamをインストールする方法
 vssue-id: 10
 ---
