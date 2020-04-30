@@ -1,9 +1,13 @@
 ---
 top: 1
-category: 一般
+category: 解説
 tags:
   - ja
-  - 自己紹介
+  - windows
+  - scoop
+  - choco
+  - sudo
+  - 解説
 date: 2020-05-01
 title: Windowsにsudoが欲しいかい？
 vssue-id: 10
