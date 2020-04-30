@@ -66,7 +66,26 @@
         </section>
       </section>
     </div>
-
+    <section
+      class="post-links"
+      style="padding:1em; border-bottom:1px solid #eaecef;"
+    >
+      <RouterLink
+        v-if="prevPost"
+        :to="prevPost.path"
+        class="post-link"
+      >
+        {{ `${$themeConfig.lang.prevPost} : ${prevPost.title}` }}
+      </RouterLink>
+      <div style="padding-bottom:1em;" />
+      <RouterLink
+        v-if="nextPost"
+        :to="nextPost.path"
+        class="post-link"
+      >
+        {{ `${$themeConfig.lang.nextPost} : ${nextPost.title}` }}
+      </RouterLink>
+    </section>
     <div
       v-if="sns"
       class="info-card-footer"
@@ -104,6 +123,19 @@ export default {
   },
 
   computed: {
+    thisIndex () {
+      return this.$posts.indexOf(this.$page)
+    },
+
+    prevPost () {
+      const nextIndex = this.thisIndex + 1
+      return nextIndex > this.$posts.length - 1 ? null : this.$posts[nextIndex]
+    },
+
+    nextPost () {
+      const prevIndex = this.thisIndex - 1
+      return prevIndex < 0 ? null : this.$posts[prevIndex]
+    },
     info () {
       return this.$themeConfig.personalInfo || {}
     },
@@ -181,6 +213,23 @@ export default {
 $headerBgHeight = 150px
 $avatarHeight = 120px
 
+.post-meta
+  .post-date
+    color lighten($grayTextColor, 50%)
+    margin-bottom 1rem
+    .create-date
+      float left
+    .update-date
+      float right
+  .post-links
+    .post-link
+      display block
+      line-height 1.7
+      color lighten($grayTextColor, 20%)
+      font-weight normal
+      transition all 0.2s
+      &:hover
+        color $accentColor
 .info-card
   padding 0
   a

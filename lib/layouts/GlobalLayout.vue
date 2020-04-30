@@ -9,6 +9,8 @@
 </template>
 
 <script>
+
+import '@mdi/font/css/materialdesignicons.css'
 import TheHeader from '@theme/components/TheHeader.vue'
 import TheMain from '@theme/components/TheMain.vue'
 import TheFooter from '@theme/components/TheFooter.vue'

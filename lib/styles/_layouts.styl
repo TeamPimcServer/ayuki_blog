@@ -1,6 +1,7 @@
 @require '~@theme/styles/variables'
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap')
 
 .container
   margin 0 auto
@@ -95,25 +96,34 @@
   background: #e0edff;
   border-radius:25em;
 }
-.yx-background-color-discord {
+.yx-background-color-discord
   background-color:#7289DA;
-}
+  border: solid 4px #7389DA;
+
+.yx-background-color-archlinux
+  background-color:#1793d1;
+  border: solid 4px #1793d1;
+
+
+.font-roboto,
+.font1
+  font-family: 'Pontano Sans', sans-serif;
 
 #button
-.button {
+.button
   cursor: pointer;
   display: inline-block;
   padding: 0.25em 1.5em 0.25em 1.5em;
-  border: solid 4px #7389DA;
   color:white;
   border-radius:1em;
   transition:1s;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-}
-.button:hover {
+
+.button:hover
   display: inline-block;
   padding: 0.25em 1.5em 0.25em 1.5em;
-  /*border: solid 4px black;*/
   border-radius:1em;
   box-shadow: 0 10px 20px rgba(0,0,0,0.40);
-}
+
+.button-a-tag
+  text-decoration: none !important;

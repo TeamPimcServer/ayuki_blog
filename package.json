@@ -70,6 +70,7 @@
     "root": true
   },
   "dependencies": {
+    "@mdi/font": "^5.1.45",
     "@vssue/api-github-v3": "^1.0.0",
     "@vssue/vuepress-plugin-vssue": "^1.0.0",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
