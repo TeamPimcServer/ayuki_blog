@@ -106,7 +106,8 @@
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "sort-package-json": "^1.22.1",
-    "vuepress": "^1.4.1"
+    "vuepress": "^1.4.1",
+    "vuepress-plugin-sitemap": "^2.3.1"
   },
   "peerDependencies": {
     "vuepress": "^1.4.1"

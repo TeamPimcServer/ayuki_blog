@@ -1,4 +1,5 @@
 const path = require('path')
+const url = 'https://blog.akarinext.org'
 
 module.exports = {
   title: 'あゆき\'s BLOG',
@@ -12,7 +13,14 @@ module.exports = {
   },
 
   evergreen: true,
-  plugins: ['@vuepress/pwa'],
+  plugins: [
+    '@vuepress/pwa',
+    'sitemap',
+    {
+      hostname: url,
+      changefreq: 'weekly',
+    },
+  ],
   /*
   plugins: [
     ['@vuepress/google-analytics', {
@@ -45,7 +53,14 @@ module.exports = {
   theme: path.resolve(__dirname, '../../lib'),
 
   head: [
+    ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'あゆき\'s BLOG' }],
+    ['meta', { property: 'og:description', content: '後で変える' }],
+    ['meta', { property: 'og:site_name', content: 'はじめてのVuePress' }],
+    ['meta', { property: 'og:url', content: 'https://blog.akarinext.org' }],
+    ['meta', { property: 'og:locale', content: 'ja_JP' }],
   ],
 
   themeConfig: {
@@ -63,7 +78,7 @@ module.exports = {
 
       sns: {
         github: {
-          account: 'meteorlxy',
+          account: 'TeamPimcServer',
           link: 'https://github.com/TeamPimcServer',
         },
       },
