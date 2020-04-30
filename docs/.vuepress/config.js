@@ -4,7 +4,7 @@ const url = 'https://blog.akarinext.org'
 module.exports = {
   title: 'あゆき\'s BLOG',
 
-  description: 'Vuepress theme of meteorlxy\'s blog',
+  description: 'TODO:変更',
 
   locales: {
     '/': {
@@ -57,10 +57,12 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'あゆき\'s BLOG' }],
-    ['meta', { property: 'og:description', content: '後で変える' }],
-    ['meta', { property: 'og:site_name', content: 'はじめてのVuePress' }],
+    ['meta', { property: 'og:description', content: 'TODO:変更' }],
+    ['meta', { property: 'og:site_name', content: 'あゆき\'s BLOG' }],
     ['meta', { property: 'og:url', content: 'https://blog.akarinext.org' }],
+    ['meta', { property: 'og:image', content: 'https://repo.akarinext.org/assets/image/twin_icon.webp' }],
     ['meta', { property: 'og:locale', content: 'ja_JP' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
   ],
 
   themeConfig: {
