@@ -57,7 +57,7 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'あゆき\'s BLOG' }],
-    ['meta', { property: 'og:description', content: '後でTODO:変更' }],
+    ['meta', { property: 'og:description', content: 'TODO:変更' }],
     ['meta', { property: 'og:site_name', content: 'あゆき\'s BLOG' }],
     ['meta', { property: 'og:url', content: 'https://blog.akarinext.org' }],
     ['meta', { property: 'og:image', content: 'https://repo.akarinext.org/assets/image/twin_icon.webp' }],
