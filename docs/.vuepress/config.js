@@ -18,7 +18,13 @@ module.exports = {
 
   evergreen: true,
   plugins: [
-    '@vuepress/pwa',
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: {
+        message: '更新あるよ～',
+        buttonText: '読み込む',
+      },
+    }],
     ['sitemap', {
       hostname: url,
       changefreq: 'weekly',
@@ -97,8 +103,6 @@ module.exports = {
       }) */
     },
   },
-
-  serviceWorker: true,
 
   themeConfig: {
     lang: 'ja-JP',
