@@ -62,6 +62,7 @@ module.exports = {
   theme: path.resolve(__dirname, '../../lib'),
 
   head: [
+    ['link', { rel: 'icon', type: 'image/webp', href: 'https://repo.akarinext.org/assets/image/twin_icon.webp' }],
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' }],
     // ['meta', { name: 'viewport' }], // TODO:SEO的に設定推奨！！(by aki) //TODO: 横ずれすることがある？
     ['link', { rel: 'manifest', href: '/manifest.json' }],
