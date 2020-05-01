@@ -6,3 +6,36 @@
 @require '~@theme/styles/_layouts'
 @require '~@theme/styles/_normalize'
 @require '~@theme/styles/_tags'
+
+.test
+  margin 1rem 0
+  padding .1rem 1.5rem
+  border-radius 0.4rem
+  background-color #f0f4f8
+  .title
+    font-weight bold
+
+.note
+  margin 1rem 0
+  padding .1rem 1.5rem
+  border-radius 0.2rem
+  background-color #F8F8F8
+  display: inline-block;
+  border-left: solid 4px;
+  .title
+    font-family: "Font Awesome 5 Free";
+  .title:before
+    color:#7f7fff;
+    content: "\f249";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    line-height: 30px;
+    border-radius: 50%;
+    border: solid 1.5px #7f7fff;
+.custom-block
+  &.right
+    color transparentify($textColor, 0.4)
+    font-size 0.9rem
+    text-align right
