@@ -78,7 +78,6 @@ sudo pacman -S lib32-nvidia-utils
 ```
 
 さて、これで遂にSteamが起動できると思います。
-
 <div class="auther-grid">
   <article class="auther-side">
     <div class="auther-line">
