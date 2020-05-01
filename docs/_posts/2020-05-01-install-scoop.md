@@ -29,7 +29,7 @@ sudo回で使ってる``scoop``を入れます。~~投稿順序逆だね~~
 
 ## 前提環境
 
-- PowerShell (^5) または PowerShell Core
+- PowerShell (^5) または　PowerShell Core
 - .Net Framework (^4.5)
 
 ::: tip
@@ -58,7 +58,7 @@ scoop install git
 ## 最後に
 
 便利でしょ？
-追加でjavaやphpなどのbucket(scoopでのリポジトリ)もあるので追加することが可能です。
+追加でjavaやphpなどのbucket（scoopでのリポジトリ）もあるので追加することが可能です。
 
 じゃんじゃん使っていこうね～
 

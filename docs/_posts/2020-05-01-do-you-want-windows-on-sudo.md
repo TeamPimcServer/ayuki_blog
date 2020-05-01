@@ -29,7 +29,7 @@ Windowsにsudoほしいけどわからない！！とか、調べても本物に
 
 ここではroot=管理者権限
 
-## Q.使えるものはあるの?
+## Q.使えるものはあるの？
 
 A.あります
 
@@ -38,7 +38,7 @@ A.あります
 - [gerardog/gsudo](https://github.com/gerardog/gsudo)
 - [lukesampson/psutils(sudo.ps1)](https://github.com/lukesampson/psutils)
 
-## どうやって入れるの?
+## どうやって入れるの？
 
 めんどくさいのでパッケージマネージャーを使いましょう。
 
@@ -58,10 +58,10 @@ scoopのインストール方法は[こちら](2020-05-01-install-scoop.md)
 
 実際に入れてみましょう。
 
-### gerardog/gsudoの場合(個人的なおすすめ)
+### gerardog/gsudoの場合（個人的なオススメ）
 
 ```ps1
-#非rootでできるのでおすすめ
+#非rootでできるのでオススメ
 scoop install gsudo
 
 #要root
@@ -88,7 +88,7 @@ sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
 ::: warning
-何も気にせずに乱用してはいけません。
+何も気にせず乱用してはいけません。
 
 ウイルス等の感染の原因になります。
 :::
@@ -99,7 +99,7 @@ sudo notepad C:\Windows\System32\drivers\etc\hosts
 
 ## 最後に
 
-root(管理者)権限なので扱いには気をつけましょう。
+root（管理者）権限なので扱いには気をつけましょう。
 
 Linuxやmacを使っているあなたもですよ？
 
