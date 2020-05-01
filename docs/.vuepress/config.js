@@ -1,4 +1,3 @@
-const emoji = require('markdown-it-emoji')
 const path = require('path')
 // const dayjs = require('dayjs')
 // const twemoji = require('twemoji')
@@ -91,17 +90,25 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     linkify: true,
+    plugins: [
+      'emoji',
+      'footnote',
+      'abbr',
+      'task-lists',
+    ],
+    /*
     config: md => {
       md.use(emoji)
       md.use(require('markdown-it-footnote'))
-      md.use(require('markdown-it-abbr'))
+      md.use(abbr)
       md.use(require('markdown-it-task-lists'))
-      /*
+      */
+    /*
       md.renderer.rules.emoji = (token, idx) => twemoji.parse(token[idx].content, {
         folder: 'svg',
         ext: '.svg',
-      }) */
-    },
+      })
+    }, */
   },
 
   themeConfig: {

@@ -25,7 +25,11 @@ vssue-id: 10
 
 ## はじめに
 
-Windowsにsudoほしいけどわからない！！とか、調べても本物に程遠いのしか見つからない！！という人に向けて書いています。
+[^0]: Linuxやmacに存在するrootに昇格するコマンド。今回は、知っていることを前提としている。
+
+Windowsにsudo[^0]ほしいけどわからない！！とか、調べても本物に程遠い[^1]のしか見つからない！！という人に向けて書いています。
+
+[^1]: 日本語で検索するとよく出てくるやつは、別窓だったり、色が出なかったりと色々と問題がある。
 
 ここではroot=管理者権限
 
@@ -44,6 +48,8 @@ A.あります
 
 ### 使えるやつ
 
+*[choco]: 要rootだが、少ない手間でたくさんのパッケージを入れられる。
+
 ::: tip
 chocoのインストール手順は準備中です。
 
@@ -60,7 +66,7 @@ scoopのインストール方法は[こちら](2020-05-01-install-scoop.md)
 
 ### gerardog/gsudoの場合（個人的なオススメ）
 
-```powershell
+```powershell{1-2}
 #非rootでできるのでオススメ
 scoop install gsudo
 
@@ -72,9 +78,11 @@ choco install gsudo
 
 ```powershell
 scoop install sudo
-
-#chocoにも同名の物があるがこれは完成度低い
 ```
+
+chocoにも同名の物があるがこれは完成度低い[^2]
+
+[^2]: 別窓タイプ
 
 ## How to
 
@@ -87,13 +95,13 @@ sudo choco install windows-terminal
 sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
-::: warning
+::: warning <i class="mdi mdi-alert-outline"></i>注意
 何も気にせず乱用してはいけません。
 
 ウイルス等の感染の原因になります。
 :::
 
-::: danger
+::: danger <i class="mdi mdi-close-octagon"></i>警告
 ``rm``や``rd``(及び``rmdir``)などのファイルを削除するコマンドに対して``C:\``や``/``を指定してはいけません。(OSや個人データをを破壊する可能性があります。)
 :::
 
@@ -125,3 +133,32 @@ Linuxやmacを使っているあなたもですよ？
     </div>
   </section>
 </div>
+
+<style lang="styl">
+abbr {
+  position: relative;
+  &::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    display: inline-block;
+    min-width: 200px;
+    padding: .6em .8em;
+    background: #3eaf7c;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    transform: translateX(-50%);
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover::after {
+    bottom: 120%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+</style>
