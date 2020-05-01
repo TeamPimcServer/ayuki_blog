@@ -22,6 +22,7 @@ module.exports = {
       hostname: url,
       changefreq: 'weekly',
     }],
+    { src: '~/plugins/vue-cookie-law.js', ssr: false },
   ], /*
   plugins: {
     '@vuepress/pwa': {},
