@@ -15,12 +15,18 @@ module.exports = {
   evergreen: true,
   plugins: [
     '@vuepress/pwa',
-    'sitemap',
-    {
+    ['sitemap', {
+      hostname: url,
+      changefreq: 'weekly',
+    }],
+  ], /*
+  plugins: {
+    '@vuepress/pwa': {},
+    sitemap: {
       hostname: url,
       changefreq: 'weekly',
     },
-  ],
+  }, */
   /*
   plugins: [
     ['@vuepress/google-analytics', {
