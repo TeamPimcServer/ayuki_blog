@@ -11,9 +11,17 @@
 <script>
 
 import '@mdi/font/css/materialdesignicons.css'
+import twemoji from 'twemoji'
+import Vue from 'vue'
 import TheHeader from '@theme/components/TheHeader.vue'
 import TheMain from '@theme/components/TheMain.vue'
 import TheFooter from '@theme/components/TheFooter.vue'
+
+Vue.directive('twemoji', {
+  inserted (el) {
+    el.innerHTML = twemoji.parse(el.innerHTML)
+  },
+})
 
 export default {
   name: 'ThemeMeteorlxy',

@@ -1,5 +1,7 @@
 const emoji = require('markdown-it-emoji')
 const path = require('path')
+// const twemoji = require('twemoji')
+
 const url = 'https://blog.akarinext.org'
 
 module.exports = {
@@ -76,6 +78,12 @@ module.exports = {
   markdown: {
     config: md => {
       md.use(emoji)
+      md.use(require('markdown-it-footnote'))
+      /*
+      md.renderer.rules.emoji = (token, idx) => twemoji.parse(token[idx].content, {
+        folder: 'svg',
+        ext: '.svg',
+      }) */
     },
   },
 

@@ -13,6 +13,7 @@ title: Windowsにsudoが欲しいかい？
 vssue-id: 10
 ---
 
+<!-- markdownlint-disable MD033 -->
 
 <!-- more -->
 

@@ -11,6 +11,7 @@ title: scoopを入れよう！！
 vssue-id: 10
 ---
 
+<!-- markdownlint-disable MD033 -->
 
 <!-- more -->
 
@@ -64,8 +65,7 @@ scoop install git
 ::: tip
 もしかすると、応用編も出るかもしれません。
 :::
-
-~~投稿順序はGitHub行かないと基本的にはバレない~~
+~~<div v-twemoji>投稿順序はGitHub行かないと基本的にはバレない:thinking:</div>~~
 
 <div class="auther-grid">
   <article class="auther-side">
