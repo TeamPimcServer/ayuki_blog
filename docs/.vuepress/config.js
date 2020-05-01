@@ -22,6 +22,7 @@ module.exports = {
       hostname: url,
       changefreq: 'weekly',
     }],
+    'flowchart',
   ], /*
   plugins: {
     '@vuepress/pwa': {},
