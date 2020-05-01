@@ -79,9 +79,13 @@ module.exports = {
   ],
 
   markdown: {
+    lineNumbers: true,
+    linkify: true,
     config: md => {
       md.use(emoji)
       md.use(require('markdown-it-footnote'))
+      md.use(require('markdown-it-abbr'))
+      md.use(require('markdown-it-task-lists'))
       /*
       md.renderer.rules.emoji = (token, idx) => twemoji.parse(token[idx].content, {
         folder: 'svg',
