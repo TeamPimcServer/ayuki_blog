@@ -36,7 +36,7 @@ A.あります
 ### 使えるもの
 
 - [gerardog/gsudo](https://github.com/gerardog/gsudo)
-- [lukesampson/psutils(sudo.powershell)](https://github.com/lukesampson/psutils)
+- [lukesampson/psutils(sudo.ps1)](https://github.com/lukesampson/psutils)
 
 ## どうやって入れるの？
 
@@ -68,7 +68,7 @@ scoop install gsudo
 choco install gsudo
 ```
 
-### lukesampson/psutils(sudo.powershell)の場合
+### lukesampson/psutils(sudo.ps1)の場合
 
 ```powershell
 scoop install sudo

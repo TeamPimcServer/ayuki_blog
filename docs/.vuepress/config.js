@@ -1,6 +1,6 @@
 const emoji = require('markdown-it-emoji')
 const path = require('path')
-const dayjs = require('dayjs')
+// const dayjs = require('dayjs')
 // const twemoji = require('twemoji')
 
 const url = 'https://blog.akarinext.org'
