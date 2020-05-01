@@ -93,6 +93,7 @@
     "minimist": "^1.2.3",
     "twemoji": "^12.1.6",
     "vue": "^2.6.11",
+    "vue-client-only": "^2.0.0",
     "vue-cookie-law": "^1.13.3",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-nprogress": "^1.1.6",
@@ -118,7 +119,8 @@
     "lint-staged": "^9.2.5",
     "sort-package-json": "^1.22.1",
     "vuepress": "^1.4.1",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "webpack": "^4.43.0"
   },
   "peerDependencies": {
     "vuepress": "^1.4.1"
