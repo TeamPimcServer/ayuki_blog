@@ -1,5 +1,6 @@
 const emoji = require('markdown-it-emoji')
 const path = require('path')
+const dayjs = require('dayjs')
 // const twemoji = require('twemoji')
 
 const url = 'https://blog.akarinext.org'
@@ -21,6 +22,11 @@ module.exports = {
     ['sitemap', {
       hostname: url,
       changefreq: 'weekly',
+    }],
+    ['@vuepress/last-updated', {
+      transformer: (timestamp, lang) => {
+        return dayjs(timestamp).format('YYYY/MM/DD H時m分')
+      },
     }],
   ], /*
   plugins: {
@@ -132,7 +138,7 @@ module.exports = {
       },
     },
 
-    lastUpdated: true,
+    // lastUpdated: true,
 
     nav: [
       { text: 'Home', link: '/', exact: true },
