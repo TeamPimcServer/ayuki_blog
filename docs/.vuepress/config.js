@@ -22,12 +22,12 @@ module.exports = {
     ['sitemap', {
       hostname: url,
       changefreq: 'weekly',
-    }],
+    }], /*
     ['@vuepress/last-updated', {
       transformer: (timestamp, lang) => {
         return dayjs(timestamp).format('YYYY/MM/DD H時m分')
       },
-    }],
+    }], */
   ], /*
   plugins: {
     '@vuepress/pwa': {},
@@ -138,7 +138,7 @@ module.exports = {
       },
     },
 
-    // lastUpdated: true,
+    lastUpdated: true,
 
     nav: [
       { text: 'Home', link: '/', exact: true },
