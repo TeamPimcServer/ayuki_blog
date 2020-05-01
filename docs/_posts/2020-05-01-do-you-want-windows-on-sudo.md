@@ -36,7 +36,7 @@ A.あります
 ### 使えるもの
 
 - [gerardog/gsudo](https://github.com/gerardog/gsudo)
-- [lukesampson/psutils(sudo.ps1)](https://github.com/lukesampson/psutils)
+- [lukesampson/psutils(sudo.powershell)](https://github.com/lukesampson/psutils)
 
 ## どうやって入れるの？
 
@@ -60,7 +60,7 @@ scoopのインストール方法は[こちら](2020-05-01-install-scoop.md)
 
 ### gerardog/gsudoの場合（個人的なオススメ）
 
-```ps1
+```powershell
 #非rootでできるのでオススメ
 scoop install gsudo
 
@@ -68,9 +68,9 @@ scoop install gsudo
 choco install gsudo
 ```
 
-### lukesampson/psutils(sudo.ps1)の場合
+### lukesampson/psutils(sudo.powershell)の場合
 
-```ps1
+```powershell
 scoop install sudo
 
 #chocoにも同名の物があるがこれは完成度低い
@@ -78,11 +78,11 @@ scoop install sudo
 
 ## How to
 
-```ps1
+```powershell
 sudo choco install windows-terminal
 ```
 
-```ps1
+```powershell
 #hostsファイルが楽に編集できるよ！やったね！！
 sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
