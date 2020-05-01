@@ -1,3 +1,4 @@
+const emoji = require('markdown-it-emoji')
 const path = require('path')
 const url = 'https://blog.akarinext.org'
 
@@ -60,6 +61,7 @@ module.exports = {
 
   head: [
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' }],
+    // ['meta', { name: 'viewport' }], // TODO:SEO的に設定推奨！！(by aki) //TODO: 横ずれすることがある？
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'あゆき\'s BLOG' }],
@@ -70,6 +72,14 @@ module.exports = {
     ['meta', { property: 'og:locale', content: 'ja_JP' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
   ],
+
+  markdown: {
+    config: md => {
+      md.use(emoji)
+    },
+  },
+
+  serviceWorker: true,
 
   themeConfig: {
     lang: 'ja-JP',
