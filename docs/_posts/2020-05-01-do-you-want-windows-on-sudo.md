@@ -133,32 +133,3 @@ Linuxやmacを使っているあなたもですよ？
     </div>
   </section>
 </div>
-
-<style lang="styl">
-abbr {
-  position: relative;
-  &::after {
-    content: attr(title);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    display: inline-block;
-    min-width: 200px;
-    padding: .6em .8em;
-    background: #3eaf7c;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.4;
-    transform: translateX(-50%);
-    transition: .2s;
-    opacity: 0;
-    visibility: hidden;
-  }
-  &:hover::after {
-    bottom: 120%;
-    opacity: 1;
-    visibility: visible;
-  }
-}
-</style>
