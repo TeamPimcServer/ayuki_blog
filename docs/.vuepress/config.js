@@ -170,7 +170,7 @@ module.exports = {
     },
 
     pagination: {
-      perPage: 5,
+      perPage: 10,
     },
   },
 }
