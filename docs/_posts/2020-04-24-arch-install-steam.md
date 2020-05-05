@@ -8,7 +8,7 @@ tags:
   - 解説
 date: 2020-04-24
 title: ArchLinuxにSteamをインストールする方法
-vssue-id: 10
+vssue-id: 4
 ---
 
 <!-- more -->

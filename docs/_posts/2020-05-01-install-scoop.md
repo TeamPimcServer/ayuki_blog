@@ -8,7 +8,7 @@ tags:
   - 解説
 date: 2020-05-01
 title: scoopを入れよう！！
-vssue-id: 10
+vssue-id: 7
 ---
 
 <!-- markdownlint-disable MD033 -->
