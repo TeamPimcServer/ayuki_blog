@@ -8,7 +8,6 @@ tags:
   - 解説
 date: 2020-05-01
 title: ShellScriptで処理をループさせる方法
-vssue-id: 6
 ---
 
 <!-- more -->
