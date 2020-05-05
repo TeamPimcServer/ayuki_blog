@@ -162,6 +162,7 @@ module.exports = {
     ],
 
     comments: {
+      platform: 'github',
       owner: 'TeamPimcServer',
       repo: 'ayuki_blog',
       clientId: process.env.VSSUE_ID,

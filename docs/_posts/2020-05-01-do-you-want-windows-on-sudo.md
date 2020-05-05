@@ -10,7 +10,6 @@ tags:
   - 解説
 date: 2020-05-01
 title: Windowsにsudoが欲しいかい？
-vssue-id: 5
 ---
 
 <!-- markdownlint-disable MD033 -->

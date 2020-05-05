@@ -6,7 +6,6 @@ tags:
   - 自己紹介
 date: 2020-04-24
 title: 初めてのyupix
-vssue-id: 3
 ---
 
 <!-- more -->
