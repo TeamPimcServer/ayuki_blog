@@ -164,8 +164,8 @@ module.exports = {
     comments: {
       owner: 'TeamPimcServer',
       repo: 'ayuki_blog',
-      clientId: '',
-      clientSecret: '',
+      clientId: process.env.VSSUE_ID,
+      clientSecret: process.env.VSSUE_SECRET,
       autoCreateIssue: false,
     },
 
