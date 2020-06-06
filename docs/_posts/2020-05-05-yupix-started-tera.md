@@ -7,7 +7,7 @@ tags:
   - tera
   - ゲーム
   - 雑談
-date: 2020-05-05
+date: 2020-05-06
 title: TERA始めました(ゆぴ)
 ---
 
@@ -17,6 +17,10 @@ title: TERA始めました(ゆぴ)
 
 ::: note
 TERA楽しいよ！
+:::
+
+::: warning
+HDDが壊れたため、しばらくログインできません
 :::
 
 <TOC />
