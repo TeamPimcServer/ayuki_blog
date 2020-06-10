@@ -1060,6 +1060,13 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@teamorangeserver/geopattern@^1.2.3-patch-1":
+  version "1.2.3-patch-1"
+  resolved "https://npm.pkg.github.com/download/@teamorangeserver/geopattern/1.2.3-patch-1/ce063f465c9bfd67b3f6db279e1c33abcd24758ba73f6d5dd4488b4a21f30b91#4b981c7e032d09595451464870689483ec3703c2"
+  integrity sha512-+9790Mb04G0u5KO5pSnJB4AbUYyQehW5wLR9EsJ6fSZTTGh0U0VThsNINuc9gEPnd7S+vmeV88bDOJBUilRE7w==
+  dependencies:
+    object-assign "^4.1.1"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -4219,11 +4226,6 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@~1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/extend/-/extend-1.2.1.tgz#a0f5fd6cfc83a5fe49ef698d60ec8a624dd4576c"
-  integrity sha1-oPX9bPyDpf5J72mNYOyKYk3UV2w=
-
 extend@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
@@ -4599,13 +4601,6 @@ gensync@^1.0.0-beta.1:
   version "1.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.1.tgz#58f4361ff987e5ff6e1e7a210827aa371eaac269"
   integrity sha512-r8EC6NO1sngH/zdD9fiRDLdcgnbayXah+mLgManTaIZJqEC1MZstmnox8KpnI2/fxQwrp5OpCOYWLp4rBl4Jcg==
-
-geopattern@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/geopattern/-/geopattern-1.2.3.tgz#de96602e46dba9095ca5774bfb3b36308f7e63fe"
-  integrity sha1-3pZgLkbbqQlcpXdL+zs2MI9+Y/4=
-  dependencies:
-    extend "~1.2.1"
 
 get-caller-file@^2.0.1:
   version "2.0.5"

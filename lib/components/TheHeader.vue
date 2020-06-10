@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import GeoPattern from 'geopattern'
+import GeoPattern from '@teamorangeserver/geopattern'
 import TransitionFadeSlide from '@theme/components/TransitionFadeSlide.vue'
 import TheHeaderNavbar from '@theme/components/TheHeaderNavbar.vue'
 import TheHeaderBanner from '@theme/components/TheHeaderBanner.vue'
