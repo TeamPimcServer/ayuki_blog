@@ -4,10 +4,7 @@
 
 yarn 2を使用した実験用ブランチ
 
-~~
-[ここで](https://blog.akarinext.org)公開している、Blogのソースコードです。
-~~
-
+~~[ここで](https://blog.akarinext.org)公開している、Blogのソースコードです。~~
 ## 使用している物
 
  - VuePress
