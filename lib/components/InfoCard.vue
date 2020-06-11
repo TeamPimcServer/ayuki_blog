@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import GeoPattern from 'geopattern'
+import GeoPattern from '@teamorangeserver/geopattern'
 import IconInfo from '@theme/components/IconInfo.vue'
 import IconSns from '@theme/components/IconSns.vue'
 
