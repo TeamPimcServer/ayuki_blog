@@ -2,7 +2,11 @@
 
 [![Build Status](https://travis-ci.org/TeamPimcServer/ayuki_blog.svg?branch=master)](https://travis-ci.org/TeamPimcServer/ayuki_blog)
 
+yarn 2を使用した実験用ブランチ
+
+~~
 [ここで](https://blog.akarinext.org)公開している、Blogのソースコードです。
+~~
 
 ## 使用している物
 
