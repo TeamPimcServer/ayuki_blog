@@ -7,7 +7,7 @@ const url = 'https://blog.akarinext.org'
 module.exports = {
   title: 'あゆき\'s BLOG',
 
-  description: 'TODO:変更',
+  description: 'あきとゆぴによる気ままな共同ブログ',
 
   locales: {
     '/': {
@@ -20,8 +20,8 @@ module.exports = {
     ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: {
-        message: '更新あるよ～',
-        buttonText: '読み込む',
+        message: 'サイトに更新があります',
+        buttonText: '更新する',
       },
     }],
     ['sitemap', {
@@ -79,7 +79,7 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'あゆき\'s BLOG' }],
-    ['meta', { property: 'og:description', content: 'TODO:変更' }],
+    ['meta', { property: 'og:description', content: 'あきとゆぴによる気ままな共同ブログ' }],
     ['meta', { property: 'og:site_name', content: 'あゆき\'s BLOG' }],
     ['meta', { property: 'og:url', content: 'https://blog.akarinext.org' }],
     ['meta', { property: 'og:image', content: 'https://repo.akarinext.org/assets/image/twin_icon.webp' }],
