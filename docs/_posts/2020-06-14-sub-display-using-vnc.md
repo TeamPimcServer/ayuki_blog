@@ -111,3 +111,26 @@ exec cinnamon &
 [ともの技術メモ](https://tomono.tokyo/2016/08/09/6228/)
 - xstartupの意味  
 [お便利サーバー.com](http://www.obenri.com/_vnc/vnc_server1.html)
+
+<div class="auther-grid">
+  <article class="auther-side">
+    <div class="auther-line">
+        <div class="balloon1">
+          <p>この記事を書いた人</p>
+        </div>
+        <br>
+        <img
+        class="auther-icon"
+        src="https://repo.akarinext.org/assets/image/icon/yupix-icon.png"
+        width="100"
+        height="100"
+        />
+          <h3>ゆぴ</h3>
+    </div>
+  </article>
+  <section class="auther-main">
+    <div class="auther-main">
+      本サイトでのテンプレートのデザインに手を加えたり、独自のデザインを追加している人です。主にMinecraftServerを運営しています
+    </div>
+  </section>
+</div>
