@@ -11,6 +11,7 @@ branches:
     - master
 
 install:
+  - echo "//npm.pkg.github.com/:_authToken=$GH_READ_PKG" >> .npmrc # gh_pkg read only
   - yarn install
 
 script:
