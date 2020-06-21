@@ -9,16 +9,7 @@
       />
     </article>
     <PostMeta v-if="meta" />
-    <div
-      v-if="vssue"
-      id="post-comments"
-      class="main-div"
-    >
-      <Vssue
-        :title="vssueTitle"
-        :issue-id="vssueId"
-      />
-    </div>
+    <PostDisqus />
   </div>
 </template>
 <script>
