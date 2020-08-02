@@ -49,18 +49,25 @@
       class="footer-text"
       v-html="custom"
     />
-    <!-- eslint-enable vue/no-v-html -->
+    <cookie-law class=".Cookie--mytheme .Cookie__button kakaka">
+      <div slot="message">
+        本サイトを引き続き閲覧する事はCoockiePolicyと同意したとみなします<router-link to="/cookiepolicy">
+          同意する
+        </router-link>
+      </div>
+    </cookie-law>
   </footer>
 </template>
 
 <script>
 import IconSns from '@theme/components/IconSns.vue'
-
+import CookieLaw from 'vue-cookie-law'
 export default {
   name: 'TheFooter',
 
   components: {
     IconSns,
+    CookieLaw,
   },
 
   computed: {

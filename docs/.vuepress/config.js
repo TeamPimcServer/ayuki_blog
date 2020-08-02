@@ -32,6 +32,9 @@ module.exports = {
     ['vuepress-plugin-container', { type: 'right', defaultTitle: '' }],
     ['vuepress-plugin-container', { type: 'test', before: info => `<div class="test"><p class="title">${info}</p>`, after: '</div>' }],
     ['vuepress-plugin-container', { type: 'note', before: info => `<div class="note"><p class="title">${info}</p>`, after: '</div>' }],
+    ['@vuepress/google-analytics', {
+      ga: 'UA-163820425-2',
+    }],
 
   ], /*
   plugins: {
@@ -121,6 +124,7 @@ module.exports = {
       location: 'Japan',
       organization: 'Team PimcServer',
       organization2: 'Team OrangeServer',
+      organization3: 'Team BlackCrystal',
 
       avatar: 'https://repo.akarinext.org/assets/image/twin_icon.webp',
 
