@@ -26,7 +26,7 @@ export default {
     meta () {
       return this.$frontmatter.meta !== false
     },
-
+    /*
     vssue () {
       return (
         this.$themeConfig.comments !== false &&
@@ -43,7 +43,7 @@ export default {
 
     vssueId () {
       return this.$frontmatter['vssue-id'] || undefined
-    },
+    }, */
   },
 }
 </script>
