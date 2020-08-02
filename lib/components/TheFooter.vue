@@ -49,11 +49,14 @@
       class="footer-text"
       v-html="custom"
     />
-    <cookie-law class=".Cookie--mytheme .Cookie__button kakaka">
+    <cookie-law
+      theme="base"
+      button-text="同意"
+    >
       <div slot="message">
-        本サイトを引き続き閲覧する事はCoockiePolicyと同意したとみなします<router-link to="/cookiepolicy">
-          同意する
-        </router-link>
+        本サイトを引き続き閲覧する事はCoockiePolicyと同意したとみなします。詳しくは<router-link to="/cookiepolicy">
+          こちら
+        </router-link>をご覧ください。
       </div>
     </cookie-law>
   </footer>
