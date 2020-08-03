@@ -49,22 +49,31 @@
       class="footer-text"
       v-html="custom"
     />
-    <cookie-law
-      theme="base"
-      button-text="同意"
-    >
-      <div slot="message">
-        本サイトを引き続き閲覧する事はCoockiePolicyと同意したとみなします。詳しくは<router-link to="/cookiepolicy">
-          こちら
-        </router-link>をご覧ください。
-      </div>
-    </cookie-law>
+    <client-only>
+      <cookie-law
+        theme="base"
+        button-text="同意"
+      >
+        <div slot="message">
+          本サイトを引き続き閲覧する事はCoockiePolicyと同意したとみなします。詳しくは<router-link to="/cookiepolicy">
+            こちら
+          </router-link>をご覧ください。
+        </div>
+      </cookie-law>
+    </client-only>
   </footer>
 </template>
 
 <script>
 import IconSns from '@theme/components/IconSns.vue'
-import CookieLaw from 'vue-cookie-law'
+// import CookieLaw from 'vue-cookie-law'
+
+let CookieLaw
+
+if (process.client) {
+  CookieLaw = require('vue-cookie-law').default
+}
+
 export default {
   name: 'TheFooter',
 
