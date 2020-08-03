@@ -58,7 +58,7 @@ module.exports = {
         maxInitialRequests: 5,
         cacheGroups: {
           vue: {
-            test: /[\\/]node_modules[\\/](vue|vue-router|vssue)[\\/]/,
+            test: /[\\/]node_modules[\\/](vue|vue-router|vssue|vue-cookie-law)[\\/]/,
             name: 'vendor.vue',
             chunks: 'all',
           },
