@@ -33,7 +33,7 @@ module.exports = {
     ['vuepress-plugin-container', { type: 'test', before: info => `<div class="test"><p class="title">${info}</p>`, after: '</div>' }],
     ['vuepress-plugin-container', { type: 'note', before: info => `<div class="note"><p class="title">${info}</p>`, after: '</div>' }],
     ['@vuepress/google-analytics', {
-      ga: 'UA-163820425-2',
+      ga: 'UA-163820425-1',
     }],
 
   ], /*
