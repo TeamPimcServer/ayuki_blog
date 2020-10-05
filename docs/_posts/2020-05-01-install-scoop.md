@@ -42,7 +42,7 @@ sudo回で使ってる``scoop``を入れます。~~投稿順序逆だね~~
 iwr -useb get.scoop.sh | iex
 ```
 
-上記のコマンドを実行した際エラーが発生した場合は次の物を実行した後に再度上記のコマンドを実行してください。
+上記のコマンドを実行した際エラーが発生した場合は、次の物を実行した後に再度上記のコマンドを実行してください。
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
