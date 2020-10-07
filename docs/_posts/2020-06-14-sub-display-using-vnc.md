@@ -7,7 +7,7 @@ tags:
   - 解説
   - vnc
 date: 2020-06-14
-title: ArchLinuxでVNCを使ってサブディスプレイを作る
+title: ArchLinuxにVNCを使ってサブディスプレイを作る
 ---
 
 ## まずはじめに
