@@ -6,7 +6,6 @@ tags:
   - archlinux
   - 解説
   - python
-  - 変数
 date: 2020-10-07
 title: pythonでの文字列の扱い方2
 ---
