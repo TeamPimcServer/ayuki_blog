@@ -71,6 +71,12 @@ linksList:
     link: 'https://xe.akirin.xyz/@aki',
     image: 'https://s3.akarinext.org/assets/*/aki-icon.png'
   }
+  - {
+    title: 'TeamPimcServer',
+    intro: '本blogの開発メンバーが運営しているチームです',
+    link: 'https://discord.gg/CcT997U',
+    image: '../image/pimc_logo.png'
+  }
 # 文字内点击图片放大相关配置
 picture:
   # 蒙版的颜色也就是 打开图片背景 显示的颜色
