@@ -1,14 +1,14 @@
 ---
-top: 1
-category: 一般
-tags:
-  - ja
-  - archlinux
-  - 解説
-  - python
-  - 変数
-date: 2020-09-20
 title: pythonでの文字列の扱い方1
+author: 'ゆぴ'
+tags:
+- ja
+- archlinux
+- 解説
+- python
+- 変数
+excerpt: pythonでの文字列の扱い方について解説
+date: 2020-09-20
 ---
 
 ## まずはじめに

@@ -1,13 +1,14 @@
 ---
-top: 1
-category: 一般
-tags:
-  - ja
-  - archlinux
-  - 解説
-  - python
-date: 2020-10-07
 title: pythonでの文字列の扱い方2
+categories: 一般
+author: 'ゆぴ'
+tags:
+- ja
+- archlinux
+- 解説
+- python
+excerpt: pythonでの文字列の扱い方について解説
+date: 2020-10-07
 ---
 
 ## まずはじめに

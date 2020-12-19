@@ -1,15 +1,16 @@
 ---
-top: 1
-category: 一般
-tags:
-  - ja
-  - archlinux
-  - 学習
-  - python
-  - django
-  - シリーズ
-date: 2020-12-05
 title: django学習（1）
+categories: 一般
+author: 'ゆぴ'
+tags:
+- ja
+- archlinux
+- 学習
+- python
+- django
+- シリーズ
+excerpt: Djangoをゆぴと共に学習してみませんか?
+date: 2020-12-05
 ---
 
 ## まずはじめに
