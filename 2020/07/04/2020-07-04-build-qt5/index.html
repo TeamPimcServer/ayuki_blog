@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
+<!DOCTYPE html><html><head><link rel="manifest" href="/manifest.json">
 		
 <title>qt5をbuildしてみる-Next</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
@@ -17,7 +14,7 @@
 <script src="/js/jquery.min.js"></script>
 
 
-	<meta name="generator" content="Hexo 5.3.0"></head>
+	<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></head>
 
 	<body>
 		
@@ -145,8 +142,7 @@
         
     </div>
 </div>
-<div class='shelter'
-     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+<div class="shelter" style="cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;">
 </div>
 <style>
     .sidebar {
@@ -290,7 +286,7 @@
                                 
                     
                 
-                <span> <a href="">あき</a></span>
+                <span> <a href>あき</a></span>
                 <p>2020-07-04 00:00:00</p>
                 <p>この記事は2 分で読めます</p>
             </div>
@@ -304,7 +300,7 @@
 <!-- more -->
 
 <p>::: tip<br>chocoにもscoop<a href="%E5%8F%A4%E3%81%84%E3%81%AE%E3%81%AF%E3%81%82%E3%82%8B%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A8%E5%90%8C%E3%81%98">^0</a>にもねぇ<br>:::</p>
-<TOC />
+<toc>
 
 <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>なぜか知らんが、mozcをwindowsでbuildしたくなったが、qtがないのでbuildしてみる。</p>
 <h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul>
@@ -315,21 +311,21 @@
 </ul>
 <p>:::tip<br>追加でvsを準備してください。C関係が必要です。<br>:::</p>
 <h3 id="どうやって入れるの？"><a href="#どうやって入れるの？" class="headerlink" title="どうやって入れるの？"></a>どうやって入れるの？</h3><p>めんどくさいのでパッケージマネージャーを使いましょう。</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell">scoop bucket add versions<br><br>scoop install git python27 perl make<br></code></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><code class="hljs powershell">scoop bucket add versions<br><br>scoop install git python27 perl make<br></code></pre></td></tr></tbody></table></figure>
 <h2 id="下準備"><a href="#下準備" class="headerlink" title="下準備"></a>下準備</h2><p>::: tip<br><code>~/work</code>を作業場所として想定しています。<br>:::</p>
 <p>まずは、git cloneをしましょう。これをしないと始まらないもんね。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git://code.qt.io/qt/qt5.git<br><span class="hljs-comment">#リポジトリ内に移動</span><br><span class="hljs-built_in">cd</span> qt5<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git://code.qt.io/qt/qt5.git<br><span class="hljs-comment">#リポジトリ内に移動</span><br><span class="hljs-built_in">cd</span> qt5<br></code></pre></td></tr></tbody></table></figure>
 <p>このままでもいいのですが、ときが進みqt6が出たときに問題が発生しそうなので、しっかりとcheckoutしましょう。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git checkout v5.15.0<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">git checkout v5.15.0<br></code></pre></td></tr></tbody></table></figure>
 <p>このままだと、準備が完璧ではないので、仕上げに次のものを実行します。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">perl init-repository --module-subset=qtbase<br><span class="hljs-comment">#エラーが出たら &quot;-f&quot; をつけましょう。</span><br><br><span class="hljs-comment">#~/work直下に移動</span><br><span class="hljs-built_in">cd</span> ..<br>mkdir qt5_build<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">perl init-repository --module-subset=qtbase<br><span class="hljs-comment">#エラーが出たら "-f" をつけましょう。</span><br><br><span class="hljs-comment">#~/work直下に移動</span><br><span class="hljs-built_in">cd</span> ..<br>mkdir qt5_build<br></code></pre></td></tr></tbody></table></figure>
 <h2 id="build-start"><a href="#build-start" class="headerlink" title="build start!!!"></a>build start!!!</h2><p>::: tip<br>スタートメニューから<code>x64 Native Tools Command Prompt for VS 2019</code>を探して実行しましょう。(2019は環境によっては、2017や2015)</p>
 <p>windowがおかしくなる場合は<code>x64 Native Tools Command Prompt for VS 2019</code>の実態のbatファイルをwindows-terminal等で動いたcmdで実行することができます。<br>例:<code>H:\VisualStudio\2019\Community\VC\Auxiliary\Build\vcvars64.bat</code><br>:::</p>
 <p>いざ、びるど</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#~/work/qt5_build</span><br>..\qt5\configure -developer-build -opensource -nomake examples -nomake tests<br><br>nmake<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#~/work/qt5_build</span><br>..\qt5\configure -developer-build -opensource -nomake examples -nomake tests<br><br>nmake<br></code></pre></td></tr></tbody></table></figure>
 <h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p><del>これを書いてる時点では結果が出てないけど、多分動くと思う。</del><br>32bitでビルドしないと、mozc用としては使えないの忘れてた・・・</p>
 
-    </div>
+    </toc></div>
 </div>
 <style>
     #noneimg img {
@@ -402,9 +398,7 @@
 
 <div class="footer">
     <div class="Copyright">
-        ©2020 By TeamPimcServer. テーマ：<a
-                style="text-decoration: none;display: contents; color: #898F9F;"
-                href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+        ©2020 By TeamPimcServer. テーマ：<a style="text-decoration: none;display: contents; color: #898F9F;" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
     </div>
     <div class="contact">
         
@@ -473,7 +467,7 @@
     <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"/>
             </g>
         </svg>
     </span>
@@ -489,6 +483,6 @@
 <script>
     console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>
-	</body>
+	
 
-</html>
+</body><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#5E73B6","text":"#ffffff"},"button":{"background":"#f1f5fb","text":"#333333"}},"theme":"classic","position":"bottom","static":false,"content":{"message":"このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。","dismiss":"同意する","link":"詳しく見る","href":"/cookiepolicy/index"}})});</script></html>

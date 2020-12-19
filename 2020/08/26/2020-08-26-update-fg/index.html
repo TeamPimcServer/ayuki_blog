@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
+<!DOCTYPE html><html><head><link rel="manifest" href="/manifest.json">
 		
 <title>1.7.10のmodding環境構築方法-Next</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
@@ -17,7 +14,7 @@
 <script src="/js/jquery.min.js"></script>
 
 
-	<meta name="generator" content="Hexo 5.3.0"></head>
+	<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></head>
 
 	<body>
 		
@@ -145,8 +142,7 @@
         
     </div>
 </div>
-<div class='shelter'
-     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+<div class="shelter" style="cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;">
 </div>
 <style>
     .sidebar {
@@ -290,7 +286,7 @@
                                 
                     
                 
-                <span> <a href="">あき</a></span>
+                <span> <a href>あき</a></span>
                 <p>2020-08-26 00:00:00</p>
                 <p>この記事は1 分で読めます</p>
             </div>
@@ -301,7 +297,7 @@
     <div id="article" class="content">
         <!-- more -->
 
-<p>::: tip<br>https使えないのは・・・<br>:::<br><TOC /></p>
+<p>::: tip<br>https使えないのは・・・<br>:::<br><toc></toc></p>
 <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>Forge 1.7.10で環境構築ができないので、色々調べてみたのでその結果をまとめてみる。</p>
 <h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul>
 <li>IDEA Community</li>
@@ -316,9 +312,9 @@
 <h3 id="gradleのバージョンを上げる"><a href="#gradleのバージョンを上げる" class="headerlink" title="gradleのバージョンを上げる"></a>gradleのバージョンを上げる</h3><p>デフォルトのForgeGradleは実は4.4.1辺りまで対応しているので、HTTPSに対応した2.1以降にするだけです。</p>
 <p><code>gradle/wrapper/gradle-wrapper.properties</code>を編集します</p>
 <p>2.1にする場合</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">distributionBase=GRADLE_USER_HOME<br>distributionPath=wrapper/dists<br>zipStoreBase=GRADLE_USER_HOME<br>zipStorePath=wrapper/dists<br>distributionUrl=https\://services.gradle.org/distributions/gradle-2.1-bin.zip<br></code></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><code class="hljs sh">distributionBase=GRADLE_USER_HOME<br>distributionPath=wrapper/dists<br>zipStoreBase=GRADLE_USER_HOME<br>zipStorePath=wrapper/dists<br>distributionUrl=https\://services.gradle.org/distributions/gradle-2.1-bin.zip<br></code></pre></td></tr></tbody></table></figure>
 <p>4.4.1にする場合</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">distributionBase=GRADLE_USER_HOME<br>distributionPath=wrapper/dists<br>zipStoreBase=GRADLE_USER_HOME<br>zipStorePath=wrapper/dists<br>distributionUrl=https\://services.gradle.org/distributions/gradle-4.4.1-bin.zip<br></code></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><code class="hljs sh">distributionBase=GRADLE_USER_HOME<br>distributionPath=wrapper/dists<br>zipStoreBase=GRADLE_USER_HOME<br>zipStorePath=wrapper/dists<br>distributionUrl=https\://services.gradle.org/distributions/gradle-4.4.1-bin.zip<br></code></pre></td></tr></tbody></table></figure>
 <h3 id="改造版のForgeGradleを使う"><a href="#改造版のForgeGradleを使う" class="headerlink" title="改造版のForgeGradleを使う"></a>改造版のForgeGradleを使う</h3><p>公式からsrcをダウンロードする代わりに、<a href="https://github.com/anatawa12/ForgeGradle-example">anatawa12/ForgeGradle-1.2</a>から<code>code</code>ボタンを押して<code>Download ZIP</code>を押してダウンロードするか、git cloneし通常どうりに使用します。</p>
 <h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p>実は3つ目に既存のbuild.gradleを書き換えて対応させる方法もありますが、それは<a href="https://github.com/anatawa12/ForgeGradle-1.2#how-to-use-this-forgegradle-instead-of-official-forgegradle">ここ</a>に書いてあるので、頑張ってみてください！！</p>
 
@@ -395,9 +391,7 @@
 
 <div class="footer">
     <div class="Copyright">
-        ©2020 By TeamPimcServer. テーマ：<a
-                style="text-decoration: none;display: contents; color: #898F9F;"
-                href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+        ©2020 By TeamPimcServer. テーマ：<a style="text-decoration: none;display: contents; color: #898F9F;" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
     </div>
     <div class="contact">
         
@@ -466,7 +460,7 @@
     <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"/>
             </g>
         </svg>
     </span>
@@ -482,6 +476,6 @@
 <script>
     console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>
-	</body>
+	
 
-</html>
+</body><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#5E73B6","text":"#ffffff"},"button":{"background":"#f1f5fb","text":"#333333"}},"theme":"classic","position":"bottom","static":false,"content":{"message":"このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。","dismiss":"同意する","link":"詳しく見る","href":"/cookiepolicy/index"}})});</script></html>

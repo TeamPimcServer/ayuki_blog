@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
+<!DOCTYPE html><html><head><link rel="manifest" href="/manifest.json">
 		
 <title>ArchLinuxにVNCを使ってサブディスプレイを作る-Next</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
@@ -17,7 +14,7 @@
 <script src="/js/jquery.min.js"></script>
 
 
-	<meta name="generator" content="Hexo 5.3.0"></head>
+	<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></head>
 
 	<body>
 		
@@ -145,8 +142,7 @@
         
     </div>
 </div>
-<div class='shelter'
-     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+<div class="shelter" style="cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;">
 </div>
 <style>
     .sidebar {
@@ -285,7 +281,7 @@
                                 
                     
                 
-                <span> <a href="">ゆぴ</a></span>
+                <span> <a href>ゆぴ</a></span>
                 <p>2020-06-06 00:00:00</p>
                 <p>この記事は2 分で読めます</p>
             </div>
@@ -300,13 +296,13 @@
 <li>tigervnc（公式パッケージ）</li>
 <li>x2vnc-no-xinerama（AUR）</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo pacman -S tigervnc<br>yay -S x2vnc-no-xinerama<br></code></pre></td></tr></table></figure>
-<h3 id="サーバー側の準備"><a href="#サーバー側の準備" class="headerlink" title="サーバー側の準備"></a>サーバー側の準備</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ vncserver :1<br>You will require a password to access your desktops.<br>Password: ******<br>Verify: ******<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">sudo pacman -S tigervnc<br>yay -S x2vnc-no-xinerama<br></code></pre></td></tr></tbody></table></figure>
+<h3 id="サーバー側の準備"><a href="#サーバー側の準備" class="headerlink" title="サーバー側の準備"></a>サーバー側の準備</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">$ vncserver :1<br>You will require a password to access your desktops.<br>Password: ******<br>Verify: ******<br></code></pre></td></tr></tbody></table></figure>
 <h3 id="Android-側の準備"><a href="#Android-側の準備" class="headerlink" title="Android　側の準備"></a>Android　側の準備</h3><p>クライアント側では Android で<a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&hl=ja">VNC Viewer - Remote Desktop</a>を今回は使用します。<br>その他にも私の環境では<a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=nine.viewer&hl=ja">VNC Viewer</a>での動作も確認しています。</p>
 <h3 id="マウスの行き来の準備"><a href="#マウスの行き来の準備" class="headerlink" title="マウスの行き来の準備"></a>マウスの行き来の準備</h3><p>ここで使用するパスワードはさきほど<a href="#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E5%81%B4%E3%81%AE%E6%BA%96%E5%82%99">サーバーの準備</a>で設定したパスワードを入力します</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ x2vnc -shared -west localhost:1<br>x2vnc: VNC server supports protocol version 3.8 (viewer 3.3)<br>Password: ******<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">$ x2vnc -shared -west localhost:1<br>x2vnc: VNC server supports protocol version 3.8 (viewer 3.3)<br>Password: ******<br></code></pre></td></tr></tbody></table></figure>
 <p>これでマウスが行き来できるようになりました。<br>::: warning<br>注意点として、ウィンドウをサブディスプレイに持っていく事などはできません（その逆もしかり）<br>:::</p>
-<h3 id="起動"><a href="#起動" class="headerlink" title="起動"></a>起動</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ vncserver :1 -geometry 1280x800 -alwaysshared<br>$ x2vnc -shared -west localhost:1<br></code></pre></td></tr></table></figure>
+<h3 id="起動"><a href="#起動" class="headerlink" title="起動"></a>起動</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">$ vncserver :1 -geometry 1280x800 -alwaysshared<br>$ x2vnc -shared -west localhost:1<br></code></pre></td></tr></tbody></table></figure>
 <h4 id="x2vncのオプションについて"><a href="#x2vncのオプションについて" class="headerlink" title="x2vncのオプションについて"></a>x2vncのオプションについて</h4><p>-westなどはマウスカーソルをどの向きに持っていった際サブディスプレイに移動するかを設定するものです。<br>以下がその一覧です</p>
 <table>
 <thead>
@@ -334,7 +330,7 @@
 </tbody></table>
 <h3 id="xstartupの編集"><a href="#xstartupの編集" class="headerlink" title="xstartupの編集"></a>xstartupの編集</h3><p>xstartupとはVNCのデスクトップ環境設定ファイルです。<br>デフォルトではおそらく<br> ~/.vnc/xstartup<br>にファイルが存在します</p>
 <p>このファイルを編集します。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ nano ~/.vnc/xstartup<br><br><span class="hljs-comment">#元からあった行を...で表しています</span><br>...<br><br><span class="hljs-comment">#⬇を追加</span><br><span class="hljs-built_in">exec</span> cinnamon &amp;<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash">$ nano ~/.vnc/xstartup<br><br><span class="hljs-comment">#元からあった行を...で表しています</span><br>...<br><br><span class="hljs-comment">#⬇を追加</span><br><span class="hljs-built_in">exec</span> cinnamon &<br></code></pre></td></tr></tbody></table></figure>
 <p>今回の場合はcinnamonがvncserverに接続すると表示されるはずです。<br>ここを自分のすでに入れてあるデスクトップ環境のコマンドに書き換えることで変更が可能です。</p>
 <h2 id="謝辞"><a href="#謝辞" class="headerlink" title="謝辞"></a>謝辞</h2><p>この記事は<strong>ともの技術メモ</strong>様の記事を見てArchLinuxで実際にできるのか<br>パッケージ名などが違う為忘れないように書かせていただきました。<br>内容の多くが<strong>ともの技術メモ</strong>様の内容と被ってしまっている事をここで謝罪します。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
@@ -418,9 +414,7 @@
 
 <div class="footer">
     <div class="Copyright">
-        ©2020 By TeamPimcServer. テーマ：<a
-                style="text-decoration: none;display: contents; color: #898F9F;"
-                href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+        ©2020 By TeamPimcServer. テーマ：<a style="text-decoration: none;display: contents; color: #898F9F;" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
     </div>
     <div class="contact">
         
@@ -489,7 +483,7 @@
     <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"/>
             </g>
         </svg>
     </span>
@@ -505,6 +499,6 @@
 <script>
     console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>
-	</body>
+	
 
-</html>
+</body><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#5E73B6","text":"#ffffff"},"button":{"background":"#f1f5fb","text":"#333333"}},"theme":"classic","position":"bottom","static":false,"content":{"message":"このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。","dismiss":"同意する","link":"詳しく見る","href":"/cookiepolicy/index"}})});</script></html>

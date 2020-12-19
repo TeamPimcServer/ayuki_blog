@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
+<!DOCTYPE html><html><head><link rel="manifest" href="/manifest.json">
 		
 <title>django学習（2）-Next</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
@@ -17,7 +14,7 @@
 <script src="/js/jquery.min.js"></script>
 
 
-	<meta name="generator" content="Hexo 5.3.0"></head>
+	<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></head>
 
 	<body>
 		
@@ -145,8 +142,7 @@
         
     </div>
 </div>
-<div class='shelter'
-     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+<div class="shelter" style="cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;">
 </div>
 <style>
     .sidebar {
@@ -289,7 +285,7 @@
                                 
                     
                 
-                <span> <a href="">ゆぴ</a></span>
+                <span> <a href>ゆぴ</a></span>
                 <p>2020-12-05 00:00:00</p>
                 <p>この記事は3 分で読めます</p>
             </div>
@@ -300,18 +296,18 @@
     <div id="article" class="content">
         <h2 id="まずはじめに"><a href="#まずはじめに" class="headerlink" title="まずはじめに"></a>まずはじめに</h2><p>この記事は私がdjangoをある程度使えるようになるまで続ける予定です。そしてこの記事を書いている私はまったく持っての初心者なのでそこのところご了承ください。</p>
 <h3 id="モデルを作る"><a href="#モデルを作る" class="headerlink" title="モデルを作る"></a>モデルを作る</h3><p>さて、前回から引き続きDjangoの学習を行っていくわけですが、今回からデータベースを使用します。モデルとはデータベースのレイアウトなどを指すものです。<br>モデルを元にデータベースが作成されるので、データベースを使用する場合は嫌でも触らなくてはいけません。</p>
-<h4 id="todo-models-py"><a href="#todo-models-py" class="headerlink" title="todo/models.py"></a>todo/models.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span>(<span class="hljs-params">models.Model</span>):</span><br>  title = models.CharField(max_length=<span class="hljs-number">60</span>)<br>  pub_data = models.DateTimeField(<span class="hljs-string">&#x27;date published&#x27;</span>)<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubTodo</span>(<span class="hljs-params">models.Model</span>):</span><br>  todo =  models.ForeignKey(<span class="hljs-string">&#x27;Todo&#x27;</span>, on_delete=models.CASCADE)<br>  choice_text = models.CharField(max_length=<span class="hljs-number">200</span>)<br></code></pre></td></tr></table></figure>
+<h4 id="todo-models-py"><a href="#todo-models-py" class="headerlink" title="todo/models.py"></a>todo/models.py</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span>(<span class="hljs-params">models.Model</span>):</span><br>  title = models.CharField(max_length=<span class="hljs-number">60</span>)<br>  pub_data = models.DateTimeField(<span class="hljs-string">'date published'</span>)<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubTodo</span>(<span class="hljs-params">models.Model</span>):</span><br>  todo =  models.ForeignKey(<span class="hljs-string">'Todo'</span>, on_delete=models.CASCADE)<br>  choice_text = models.CharField(max_length=<span class="hljs-number">200</span>)<br></code></pre></td></tr></tbody></table></figure>
 <p>はい、これでまず何を作成したのかについてです。基本的に<code>Todo</code>classにはTodoのタイトルと時間を入れるカラムがあります。<code>SubTodo</code>には<code>Todo</code>クラスで情報が削除された際に<code>SubTodo</code>側でも削除するために<code>ForeignKey</code>が設定してあります。あとは好きな文字を入れるためのカラムです。</p>
-<h4 id="dashboard-settings-py"><a href="#dashboard-settings-py" class="headerlink" title="dashboard/settings.py"></a>dashboard/settings.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">INSTALLED_APPS = [<br>    <span class="hljs-string">&#x27;todo.apps.TodoConfig&#x27;</span>,  <span class="hljs-comment"># 追加</span><br>    <span class="hljs-string">&#x27;django.contrib.admin&#x27;</span>,<br>    <span class="hljs-string">&#x27;django.contrib.auth&#x27;</span>,<br>    <span class="hljs-string">&#x27;django.contrib.contenttypes&#x27;</span>,<br>    <span class="hljs-string">&#x27;django.contrib.sessions&#x27;</span>,<br>    <span class="hljs-string">&#x27;django.contrib.messages&#x27;</span>,<br>    <span class="hljs-string">&#x27;django.contrib.staticfiles&#x27;</span>,<br>]<br></code></pre></td></tr></table></figure>
+<h4 id="dashboard-settings-py"><a href="#dashboard-settings-py" class="headerlink" title="dashboard/settings.py"></a>dashboard/settings.py</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><code class="hljs python">INSTALLED_APPS = [<br>    <span class="hljs-string">'todo.apps.TodoConfig'</span>,  <span class="hljs-comment"># 追加</span><br>    <span class="hljs-string">'django.contrib.admin'</span>,<br>    <span class="hljs-string">'django.contrib.auth'</span>,<br>    <span class="hljs-string">'django.contrib.contenttypes'</span>,<br>    <span class="hljs-string">'django.contrib.sessions'</span>,<br>    <span class="hljs-string">'django.contrib.messages'</span>,<br>    <span class="hljs-string">'django.contrib.staticfiles'</span>,<br>]<br></code></pre></td></tr></tbody></table></figure>
 <p>モデルを有効化するためにもINSTALLED_APPSへの追加を忘れないようにしましょう。基本的な命名規則は<code>作成したアプリの名前.apps.作成したアプリ名(先頭大文字)Config</code>になるので、今回の場合は<code>todo.apps.TodoConfig</code>となります。</p>
-<h3 id="マイグレーションしてみよう"><a href="#マイグレーションしてみよう" class="headerlink" title="マイグレーションしてみよう"></a>マイグレーションしてみよう</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><code class="hljs cmd">python manage.py makemigrations todo<br></code></pre></td></tr></table></figure>
+<h3 id="マイグレーションしてみよう"><a href="#マイグレーションしてみよう" class="headerlink" title="マイグレーションしてみよう"></a>マイグレーションしてみよう</h3><figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><code class="hljs cmd">python manage.py makemigrations todo<br></code></pre></td></tr></tbody></table></figure>
 <p>このコマンドを実行することによって、Djangoにモデル変化があったことを伝えることができます。そして、変更点をマイグレーション形式で保存します。<br>基本的にマイグレーションはmodels.pyを元に作成されたファイルです。</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><code class="hljs cmd">python manage.py migrate<br></code></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><code class="hljs cmd">python manage.py migrate<br></code></pre></td></tr></tbody></table></figure>
 <p>このコマンドを実行することでさきほどのコマンドで生成されたマイグレーションファイルを使用し、データベースにスキーマを同期します。<br>モデルに変更を加えて、この手順を再度踏むだけで簡単にデータベースの維持ができます。</p>
-<h3 id="管理者画面を使う"><a href="#管理者画面を使う" class="headerlink" title="管理者画面を使う"></a>管理者画面を使う</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><code class="hljs cmd">python manage.py createsuperuser<br></code></pre></td></tr></table></figure>
+<h3 id="管理者画面を使う"><a href="#管理者画面を使う" class="headerlink" title="管理者画面を使う"></a>管理者画面を使う</h3><figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><code class="hljs cmd">python manage.py createsuperuser<br></code></pre></td></tr></tbody></table></figure>
 <p>名前などさまざまなことをきかれますがすべて自分用に設定してください。</p>
 <p>設定が終われば念の為サーバーを再起動し、 <a target="_blank" rel="noopener" href="http://localhost:8000/admin">http://localhost:8000/admin</a> にアクセスしてください。<br>そしてさきほど作ったユーザーでログインできれば問題ありません。次にTodoモデルを管理者画面で使えるようにしましょう</p>
-<h4 id="todo-admin-py"><a href="#todo-admin-py" class="headerlink" title="todo/admin.py"></a>todo/admin.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin<br><br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Todo<br><br>admin.site.register(Todo)<br></code></pre></td></tr></table></figure>
+<h4 id="todo-admin-py"><a href="#todo-admin-py" class="headerlink" title="todo/admin.py"></a>todo/admin.py</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin<br><br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Todo<br><br>admin.site.register(Todo)<br></code></pre></td></tr></tbody></table></figure>
 <p>これでページを更新し、Todoという項目が増えていれば成功です！お疲れ様でした！</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://docs.djangoproject.com/ja/3.1/intro/tutorial02/">https://docs.djangoproject.com/ja/3.1/intro/tutorial02/</a></p>
 <h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p>最後まで読んでいただき感謝感激です。この記事は現状参考とほぼ同じことになっていますが、今後もっと多くのことに挑戦していくつもりです。<br>次回はデータベースからデータを取得し、ページに表示してみたいと想います。</p>
@@ -389,9 +385,7 @@
 
 <div class="footer">
     <div class="Copyright">
-        ©2020 By TeamPimcServer. テーマ：<a
-                style="text-decoration: none;display: contents; color: #898F9F;"
-                href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+        ©2020 By TeamPimcServer. テーマ：<a style="text-decoration: none;display: contents; color: #898F9F;" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
     </div>
     <div class="contact">
         
@@ -460,7 +454,7 @@
     <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"/>
             </g>
         </svg>
     </span>
@@ -476,6 +470,6 @@
 <script>
     console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>
-	</body>
+	
 
-</html>
+</body><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#5E73B6","text":"#ffffff"},"button":{"background":"#f1f5fb","text":"#333333"}},"theme":"classic","position":"bottom","static":false,"content":{"message":"このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。","dismiss":"同意する","link":"詳しく見る","href":"/cookiepolicy/index"}})});</script></html>

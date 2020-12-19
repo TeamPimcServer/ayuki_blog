@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
+<!DOCTYPE html><html><head><link rel="manifest" href="/manifest.json">
 		
 <title>ShellScriptで変数に値があるかどうかを判断する方法-Next</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
@@ -17,7 +14,7 @@
 <script src="/js/jquery.min.js"></script>
 
 
-	<meta name="generator" content="Hexo 5.3.0"></head>
+	<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></head>
 
 	<body>
 		
@@ -145,8 +142,7 @@
         
     </div>
 </div>
-<div class='shelter'
-     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+<div class="shelter" style="cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;">
 </div>
 <style>
     .sidebar {
@@ -285,7 +281,7 @@
                                 
                     
                 
-                <span> <a href="">ゆぴ</a></span>
+                <span> <a href>ゆぴ</a></span>
                 <p>2020-06-06 00:00:00</p>
                 <p>この記事は1 分で読めます</p>
             </div>
@@ -299,20 +295,20 @@
 <!-- more -->
 
 <p>::: note<br>AND　ORを使う際の変数の値のチェックには気をつけよう!<br>※ORの場合片方だけがあるだけで<strong>真</strong>になったり。。。<br>:::</p>
-<TOC />
+<toc>
 
 <h2 id="まずはじめに"><a href="#まずはじめに" class="headerlink" title="まずはじめに"></a>まずはじめに</h2><p>ShellScriptで変数に値がある場合だけ動かしたい処理などは多くあるはずです。</p>
 <h2 id="やりかた"><a href="#やりかた" class="headerlink" title="やりかた"></a>やりかた</h2><h3 id="変数が空の場合"><a href="#変数が空の場合" class="headerlink" title="変数が空の場合"></a>変数が空の場合</h3><p>今回はtestという変数を使ってテストします。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span> [[ -z <span class="hljs-string">&quot;<span class="hljs-variable">$test</span>&quot;</span> ]];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;変数がないよ!&quot;</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span> [[ -z <span class="hljs-string">"<span class="hljs-variable">$test</span>"</span> ]];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">"変数がないよ!"</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></tbody></table></figure>
 <p>-zを使うことで変数がある場合は<strong>真</strong>となります</p>
-<h3 id="変数がある場合"><a href="#変数がある場合" class="headerlink" title="変数がある場合"></a>変数がある場合</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#変数を定義</span><br><span class="hljs-built_in">test</span>=<span class="hljs-string">&quot;test&quot;</span><br><br><span class="hljs-keyword">if</span> [[ -n <span class="hljs-string">&quot;<span class="hljs-variable">$test</span>&quot;</span> ]];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;変数があるよ!&quot;</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
+<h3 id="変数がある場合"><a href="#変数がある場合" class="headerlink" title="変数がある場合"></a>変数がある場合</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#変数を定義</span><br><span class="hljs-built_in">test</span>=<span class="hljs-string">"test"</span><br><br><span class="hljs-keyword">if</span> [[ -n <span class="hljs-string">"<span class="hljs-variable">$test</span>"</span> ]];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">"変数があるよ!"</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></tbody></table></figure>
 <p>-nを使うことで変数がない場合<strong>真</strong>となります。</p>
 <h3 id="1つで確認する方法"><a href="#1つで確認する方法" class="headerlink" title="1つで確認する方法"></a>1つで確認する方法</h3><p>ifの使い方をある程度知ってる場合は当たり前のような話ですが<br>一応書いておきます。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#変数を定義(elseで動作)</span><br><span class="hljs-built_in">test</span>=<span class="hljs-string">&quot;test&quot;</span><br><br><span class="hljs-keyword">if</span> [[ -z <span class="hljs-string">&quot;<span class="hljs-variable">$test</span>&quot;</span> ]];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;変数がないよ!&quot;</span><br><span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;変数があるよ!&quot;</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#変数を定義(elseで動作)</span><br><span class="hljs-built_in">test</span>=<span class="hljs-string">"test"</span><br><br><span class="hljs-keyword">if</span> [[ -z <span class="hljs-string">"<span class="hljs-variable">$test</span>"</span> ]];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">"変数がないよ!"</span><br><span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">"変数があるよ!"</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></tbody></table></figure>
 <p>-zで変数がない場合<strong>真</strong>となるため、elseを使うことで変数がある場合の動作を作ることができます。</p>
 <h2 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h2><p>ShellScriptは楽しいので、今後もこういった事を書いていく予定です。<br>あと、昔作った記事で書きかけのやつとかは今度書きます。<br>最後に更新が遅くなってしまったのは純粋無為に何も書くようなことが無かったからです</p>
 
-    </div>
+    </toc></div>
 </div>
 <style>
     #noneimg img {
@@ -385,9 +381,7 @@
 
 <div class="footer">
     <div class="Copyright">
-        ©2020 By TeamPimcServer. テーマ：<a
-                style="text-decoration: none;display: contents; color: #898F9F;"
-                href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+        ©2020 By TeamPimcServer. テーマ：<a style="text-decoration: none;display: contents; color: #898F9F;" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
     </div>
     <div class="contact">
         
@@ -456,7 +450,7 @@
     <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"/>
             </g>
         </svg>
     </span>
@@ -472,6 +466,6 @@
 <script>
     console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>
-	</body>
+	
 
-</html>
+</body><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#5E73B6","text":"#ffffff"},"button":{"background":"#f1f5fb","text":"#333333"}},"theme":"classic","position":"bottom","static":false,"content":{"message":"このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。","dismiss":"同意する","link":"詳しく見る","href":"/cookiepolicy/index"}})});</script></html>

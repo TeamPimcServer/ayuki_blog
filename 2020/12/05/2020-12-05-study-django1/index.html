@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
+<!DOCTYPE html><html><head><link rel="manifest" href="/manifest.json">
 		
 <title>django学習（1）-Next</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
@@ -17,7 +14,7 @@
 <script src="/js/jquery.min.js"></script>
 
 
-	<meta name="generator" content="Hexo 5.3.0"></head>
+	<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></head>
 
 	<body>
 		
@@ -145,8 +142,7 @@
         
     </div>
 </div>
-<div class='shelter'
-     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+<div class="shelter" style="cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;">
 </div>
 <style>
     .sidebar {
@@ -289,7 +285,7 @@
                                 
                     
                 
-                <span> <a href="">ゆぴ</a></span>
+                <span> <a href>ゆぴ</a></span>
                 <p>2020-12-05 00:00:00</p>
                 <p>この記事は2 分で読めます</p>
             </div>
@@ -299,22 +295,22 @@
 <div class="article-content">
     <div id="article" class="content">
         <h2 id="まずはじめに"><a href="#まずはじめに" class="headerlink" title="まずはじめに"></a>まずはじめに</h2><p>この記事は私がdjangoをある程度使えるようになるまで続ける予定です。そしてこの記事を書いている私はまったく持っての初心者なのでそこのところご了承ください。</p>
-<h3 id="プロジェクトを作る"><a href="#プロジェクトを作る" class="headerlink" title="プロジェクトを作る"></a>プロジェクトを作る</h3><figure class="highlight isbl"><table><tr><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">alert</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>);</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><code class="hljs cmd">django-admin startproject プロジェクト名<br><br>（例） django-admin startproject dashboard<br></code></pre></td></tr></table></figure>
+<h3 id="プロジェクトを作る"><a href="#プロジェクトを作る" class="headerlink" title="プロジェクトを作る"></a>プロジェクトを作る</h3><figure class="highlight isbl"><table><tbody><tr><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">alert</span>(<span class="hljs-string">'Hello World!'</span>);</span><br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><code class="hljs cmd">django-admin startproject プロジェクト名<br><br>（例） django-admin startproject dashboard<br></code></pre></td></tr></tbody></table></figure>
 <h3 id="起動してみる"><a href="#起動してみる" class="headerlink" title="起動してみる"></a>起動してみる</h3><p>とりあえず、弄る前に起動してみます</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><code class="hljs cmd">python manage.py runserver<br></code></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><code class="hljs cmd">python manage.py runserver<br></code></pre></td></tr></tbody></table></figure>
 <p>恐らく、8000番ポートが使用されていなければ <a target="_blank" rel="noopener" href="http://localhost:8000/">http://localhost:8000</a> で接続が可能だと想います。<br>ちなみにこれは開発サーバーなので、runserverで起動している間に編集した場合は自動でリロードが行われます。便利ですね。</p>
 <h3 id="アプリケーションを作る"><a href="#アプリケーションを作る" class="headerlink" title="アプリケーションを作る"></a>アプリケーションを作る</h3><p>さて、最初に作成したdashboardフォルダーの中に入り以下のコマンドを実行してください。</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><code class="hljs cmd">python manage.py startapp todo<br></code></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><code class="hljs cmd">python manage.py startapp todo<br></code></pre></td></tr></tbody></table></figure>
 <p>これで、dashboardフォルダーの中にtodoというフォルダーが生成されたと想います。<br>ちなみに、公式ドキュメントにはプロジェクトとアプリケーションの違いが以下のように記載されています。</p>
 <blockquote>
 <p>プロジェクトとアプリの違いは何でしょうか？ アプリとは、ウェブログシステム、公的記録のデータベース、小規模な投票アプリなど、何かを行う Web アプリケーションです。プロジェクトは、特定のウェブサイトの構成とアプリのコレクションです。プロジェクトには複数のアプリを含めることができます。 アプリは複数のプロジェクトに存在できます。</p>
 </blockquote>
 <h3 id="ビューを作ってみる"><a href="#ビューを作ってみる" class="headerlink" title="ビューを作ってみる"></a>ビューを作ってみる</h3><p>ビューは主にDjangoで描画などを行う際に使用されるファイルです。</p>
-<h4 id="todo-views-py"><a href="#todo-views-py" class="headerlink" title="todo/views.py"></a>todo/views.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span>(<span class="hljs-params">request</span>):</span><br>  <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;ハロー！&quot;</span>)<br></code></pre></td></tr></table></figure>
+<h4 id="todo-views-py"><a href="#todo-views-py" class="headerlink" title="todo/views.py"></a>todo/views.py</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span>(<span class="hljs-params">request</span>):</span><br>  <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">"ハロー！"</span>)<br></code></pre></td></tr></tbody></table></figure>
 <p>さて、これで表示するものはできました。次にリンクがありませんよね、これじゃあどうやって接続すればいいのかわかりません。<br>そこで出てくるのがurls.pyです。基本的に<code>/</code>に接続があったら〇〇のviewsに飛ばすなどと言ったことができるファイルだと考えておけば問題ありません。<br>::: tip<br>アプリケーション（todo）の方にはurls.pyは存在しないため、自分で作成してください。<br>:::</p>
-<h4 id="todo-urls-py"><a href="#todo-urls-py" class="headerlink" title="todo/urls.py"></a>todo/urls.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path<br><br><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views<br><br>urlpatterns = [<br>  path(<span class="hljs-string">&#x27;&#x27;</span>, views.index, name=<span class="hljs-string">&#x27;index&#x27;</span>)<br>]<br></code></pre></td></tr></table></figure>
-<h4 id="dashboard-urls-py"><a href="#dashboard-urls-py" class="headerlink" title="dashboard/urls.py"></a>dashboard/urls.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin<br><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> include, path<br><br>urlpatterns = [<br>  path(<span class="hljs-string">&#x27;todo/&#x27;</span>, include(<span class="hljs-string">&#x27;todo.urls&#x27;</span>)),<br>  path(<span class="hljs-string">&#x27;admin/&#x27;</span>, admin.site.urls),<br>]<br></code></pre></td></tr></table></figure>
+<h4 id="todo-urls-py"><a href="#todo-urls-py" class="headerlink" title="todo/urls.py"></a>todo/urls.py</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path<br><br><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views<br><br>urlpatterns = [<br>  path(<span class="hljs-string">''</span>, views.index, name=<span class="hljs-string">'index'</span>)<br>]<br></code></pre></td></tr></tbody></table></figure>
+<h4 id="dashboard-urls-py"><a href="#dashboard-urls-py" class="headerlink" title="dashboard/urls.py"></a>dashboard/urls.py</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin<br><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> include, path<br><br>urlpatterns = [<br>  path(<span class="hljs-string">'todo/'</span>, include(<span class="hljs-string">'todo.urls'</span>)),<br>  path(<span class="hljs-string">'admin/'</span>, admin.site.urls),<br>]<br></code></pre></td></tr></tbody></table></figure>
 <p>さて、いっきによくわからないものが出てきました。。。まず、<code>dashboard/urls.py</code>の方から準に見ていきましょう。<br>このファイルでは、<code>http://localhost:8000/todo</code>などで接続したユーザーの処理をtodoアプリのurls.pyに渡しています。<br><code>include</code>はアクセスした時点が<code>http://localhost:8000/todo</code>だった場合、<code>/todo</code>の部分のみをtodoアプリのurls.pyに渡すような感じです。</p>
 <p>そうしたら、<code>http://localhost:8000/todo</code>に接続してみましょう。<code>ハロー！</code>と出たなら成功です！</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://docs.djangoproject.com/ja/3.1/intro/tutorial01/">https://docs.djangoproject.com/ja/3.1/intro/tutorial01/</a></p>
@@ -393,9 +389,7 @@
 
 <div class="footer">
     <div class="Copyright">
-        ©2020 By TeamPimcServer. テーマ：<a
-                style="text-decoration: none;display: contents; color: #898F9F;"
-                href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+        ©2020 By TeamPimcServer. テーマ：<a style="text-decoration: none;display: contents; color: #898F9F;" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
     </div>
     <div class="contact">
         
@@ -464,7 +458,7 @@
     <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"/>
             </g>
         </svg>
     </span>
@@ -480,6 +474,6 @@
 <script>
     console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>
-	</body>
+	
 
-</html>
+</body><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#5E73B6","text":"#ffffff"},"button":{"background":"#f1f5fb","text":"#333333"}},"theme":"classic","position":"bottom","static":false,"content":{"message":"このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。","dismiss":"同意する","link":"詳しく見る","href":"/cookiepolicy/index"}})});</script></html>
