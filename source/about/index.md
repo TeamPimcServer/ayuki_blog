@@ -1,12 +1,12 @@
 ---
 title: その他
 date: 2020-11-03
+author: 'TeamPimcServer'
 aubot: あゆき's BLOG
 portrait: 'https://s3.akarinext.org/assets/*/twin_icon.webp'
 describe: 'あきとゆぴによる共同ブログです'
 type: "about"
 layout: "about"
-author: TeamPimcServer
 ---
 
 ## 本サイトについて
@@ -26,4 +26,4 @@ Minecraftの画像などは主にゆぴ、またはあきが自分のサーバ�
 
 ### CookiePolicyについて
 
-詳しくは [こちら](../cookiepolicy/index.md)をご覧ください。
+詳しくは [こちら](../cookiepolicy/index)をご覧ください。
