@@ -2,7 +2,7 @@
     font-size: 32px;
     font-weight: 900;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e06c75;
+    border-bottom: 2px solid #90caf9;
 }
 
 #article h1, #article h2 {
@@ -14,6 +14,7 @@
     font-size: 25px;
     border-left: 3px solid #73b1e0;
     padding-left: 10px;
+    color: #494949;
 }
 
 #article h3 {
@@ -27,7 +28,7 @@
 }
 
 #article a {
-    color: #e06c75;
+    color: #90caf9;
     text-decoration: none;
 }
 
@@ -70,6 +71,7 @@
     line-height: 1.5em;
     font-size: .95em;
     letter-spacing: .7px;
+    color: #333333;
 }
 
 #article ol {
@@ -173,7 +175,7 @@
 
 #article p code, #article ul li code {
     background: #F3F4F4;
-    color: #f47466;
+    color: #64b5f6;
     font-size: 1em;
     margin: 0 3px;
     padding: 0 10px;
