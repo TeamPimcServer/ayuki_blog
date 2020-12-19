@@ -26,4 +26,4 @@ Minecraftの画像などは主にゆぴ、またはあきが自分のサーバ�
 
 ### CookiePolicyについて
 
-詳しくは [こちら](../cookiepolicy/index)をご覧ください。
+詳しくは [こちら](/cookiepolicy/index)をご覧ください。
