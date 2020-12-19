@@ -106,3 +106,28 @@ deploy:
   type: git
   repo: git@github.com:TeamPimcServer/ayuki_blog.git
   branch: gh-pages
+
+cookieconsent:
+  enable : true
+  options: {
+    "palette": {
+      "popup": {
+        "background": "#5E73B6",
+        "text": "#ffffff"
+      },
+      "button": {
+        "background": "#f1f5fb",
+        "text": "#333333"
+
+      }
+    },
+    "theme": "classic",
+    "position": "bottom",
+    "static": false,
+    "content": {
+      "message": "このウェブサイトでは、Cookieを使用して、ウェブサイトで最高のエクスペリエンスを得られるようにしています。",
+      "dismiss": "同意する",
+      "link": "詳しく見る",
+      "href": "/cookiepolicy/index"
+    }
+  }
