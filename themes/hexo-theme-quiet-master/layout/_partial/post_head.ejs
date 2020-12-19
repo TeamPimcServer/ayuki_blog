@@ -35,6 +35,7 @@
                 <% } %>
                 <span> <a href=""><%- page.author %></a></span>
                 <p><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
+                <p>この記事は<%- readingTime(page.content) %></p>
             </div>
         </div>
     </div>

@@ -7,10 +7,8 @@ tags:
 - ja
 - ゆぴ 
 excerpt: 自己紹介
-date: 2020-12-19 20:00:00
-cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
+date: 2020-04-24
 ---
-
 ## 名前
 
 yupixやゆぴなどの名前で活動しています。
