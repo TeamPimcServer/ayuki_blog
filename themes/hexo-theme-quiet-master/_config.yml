@@ -1,7 +1,7 @@
 # ウェブサイト名
 title: あゆき's BLOG
 # ウェブサイトのタイトルの接尾辞
-suffix: Quiet
+suffix: Next
 # 作者名(CopyRightなどに使用)
 author: TeamPimcServer
 # サイト説明
@@ -9,8 +9,8 @@ home_describe: A STUDENT WITH IDEALS AND BELIEFS.
 # サイトのキーワード
 keyword: hexo, あゆき's Blog, ayuki's blog
 is_article_img: false  #false是否开启文章背景图显示(随机图片)
-# 网站描述
-web_description: 描述
+# ogp
+web_description: あきとゆぴによる気ままな共同ブログ
 # メニューの名前
 menus_title:
   home: HOME
