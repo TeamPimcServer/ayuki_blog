@@ -1,5 +1,5 @@
 ---
-title: 現状のモチベーション
+title: ゆぴの日記 12月号
 categories: 日記
 author: 'ゆぴ'
 tags:
