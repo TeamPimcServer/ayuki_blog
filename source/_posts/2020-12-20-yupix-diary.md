@@ -9,6 +9,7 @@ tags:
 - ゆぴの日記
 excerpt: '12月号: 最近の身の回りの出来事...お話します...'
 date: 2020-12-20 16:45:00
+cover: '/image/cover/winter-diary.webp'
 ---
 
 ## まずはじめに
