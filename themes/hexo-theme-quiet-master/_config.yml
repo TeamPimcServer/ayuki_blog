@@ -75,7 +75,7 @@ linksList:
     title: 'TeamPimcServer',
     intro: '本blogの開発メンバーが運営しているチームです',
     link: 'https://discord.gg/CcT997U',
-    image: '/image/pimc_logo.png'
+    image: '/image/icon/pimc-logo.svg'
   }
 # 文字内点击图片放大相关配置
 picture:

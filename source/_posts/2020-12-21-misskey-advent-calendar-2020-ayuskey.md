@@ -9,7 +9,7 @@ tags:
 - Misskey
 excerpt: XEのEOLに伴いこっちに移植
 date: 2020-12-21
-cover: '/image/cover/AYUSKEY.webp'
+cover: '/image/cover/ayuskey.svg'
 ---
 
 **[Misskey Advent Calendar 2020](https://adventar.org/calendars/5026)の21日目の記事です。**
