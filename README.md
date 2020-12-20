@@ -18,4 +18,4 @@ hexo-renderer-marked => hexo-renderer-markdown-it
 
 ## LICENSE
 
-[MIT](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/LICENSE) &copy; [@QiaoBug](https://github.com/QiaoBug) & [Contributors](https://github.com/QiaoBug/hexo-theme-quiet/graphs/contributors)	
+[MIT](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/LICENSE) &copy; [@QiaoBug](https://github.com/QiaoBug) & [Contributors](https://github.com/QiaoBug/hexo-theme-quiet/graphs/contributors)
