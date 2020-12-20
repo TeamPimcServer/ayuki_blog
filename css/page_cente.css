@@ -5,19 +5,6 @@
     border-bottom: 2px solid #90caf9;
 }
 
-
-#article .note.info {
-    border-left: 4px solid;
-    color: #17a2b8;
-    border-left-color: #17a2b8 !important;
-}
-
-#article .info:before {
-    content: 'INFO';
-    color: #4CA5CE;
-    font-size: 1.5em;
-}
-
 #article h1, #article h2 {
     line-height: 40px;
     margin: 20px 0 15px;
