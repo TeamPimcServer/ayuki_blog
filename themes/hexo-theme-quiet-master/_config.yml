@@ -63,13 +63,13 @@ linksList:
     title: 'ゆぴ',
     intro: '本サイトでのテンプレートのデザインに手を加えたり、独自のデザインを追加している人です。主にMinecraftServerを運営しています',
     link: 'https://ne.akarinext.org/@yupix',
-    image: 'https://s3.akarinext.org/assets/*/yupix-icon.png'
+    image: '/image/icon/yupix.webp'
   }
   - {
     title: 'あき',
     intro: '主にMinecraftServerを運営しています',
     link: 'https://xe.akirin.xyz/@aki',
-    image: 'https://s3.akarinext.org/assets/*/aki-icon.png'
+    image: '/image/icon/aki.webp'
   }
   - {
     title: 'TeamPimcServer',
@@ -86,4 +86,4 @@ picture:
   # 图片角度 就是显示图片的角度
   imgRadius: "10px"
 #默认的cover (默认缩略图) 在没有填写（这里可以替换（可以是api也可以是固定的图））
-default_cover: https://s3.akarinext.org/assets/*/NOT%20FOUND.png
+default_cover: /image/notfound.webp

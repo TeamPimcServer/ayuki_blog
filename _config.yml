@@ -111,17 +111,34 @@ pwa:
   manifest:
     path: /manifest.json
     body:
-      name: のい太ろぐ
-      short_name: のい太ろぐ
+      name: "あゆき's blog"
+      short_name: "あゆき's blog"
       icons:
         - src: /image/favicon_512.png
           sizes: 512x512
           type: image/png
+      scope: /
       start_url: /
       theme_color: '#d35'
       background_color: '#26272b'
       display: standalone
-
+      orientation: portrait
+  serviceWorker:
+    path: /sw.js
+    preload:
+      urls:
+        - /
+      posts: 5
+    opts:
+      networkTimeoutSeconds: 5
+    routes:
+      - pattern: !!js/regexp /hm.baidu.com/
+        strategy: networkOnly
+      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
+        strategy: cacheFirst
+      - pattern: !!js/regexp /\//
+        strategy: networkFirst
+  priority: 5
 cookieconsent:
   enable : true
   options: {
