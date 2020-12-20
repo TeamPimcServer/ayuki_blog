@@ -84,7 +84,7 @@ Groundpolisからも一部取り入れさせて頂いている文法がありま
 
 ### 既知のバグ
 
-トークの読み込みが終わらない=>~~原因調査中...~~[#61](https://github.com/TeamOrangeServer/misskey/issues/61)
+トークの読み込みが終わらない=>~~原因調査中...~~[#61](https://github.com/TeamOrangeServer/misskey/issues/61) => [5.0.0-rc.10](https://github.com/TeamOrangeServer/misskey/releases/tag/11.37.1-rei0784-5.0.0-rc.10)で解決
 モバイルで引用RNできない=>原因調査中...
 
 ### 夢は大きく 〜今後の目標〜
