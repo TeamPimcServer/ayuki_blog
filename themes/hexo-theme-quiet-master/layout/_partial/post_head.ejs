@@ -21,7 +21,8 @@
                     <% if (page.author) { %>
                         <% for(const each of theme.linksList || []) { %>
                             <% if (page.author == each.title) { %>
-                                <img src="<%- each.image %>" alt="Quiet" width="40" height="40" style="border-radius: 1em;">
+                                <img src="<%- each.image %>" alt="Quiet" width="40" height="40"
+                                     style="border-radius: 1em;">
                                 <% break %>
                             <% } %>
 
@@ -36,10 +37,12 @@
                         </svg>
                     <% } %>
                 <% } %>
-                <span> <a href=""><%- page.author %></a></span>
-                <p><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
-                <p><%= date(page.updated, "YYYY-MM-DD HH:mm:ss") %></p>
-                <p>この記事は<%- readingTime(page.content) %></p>
+                <span><a href="" style=""><%- page.author %></a></span>
+                    <p>この記事は<%- readingTime(page.content) %></p>
+                <div>
+                    <p><%- fa_inline('clock', {prefix: 'far'}) %>公開日時: <%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
+                    <p><%- fa_inline('history', {prefix: 'fas'}) %>更新日時: <%= date(page.updated, "YYYY-MM-DD HH:mm:ss") %></p>
+                </div>
             </div>
         </div>
     </div>
