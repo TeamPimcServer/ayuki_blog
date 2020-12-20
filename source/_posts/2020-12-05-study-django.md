@@ -11,6 +11,7 @@ tags:
 - シリーズ
 excerpt: Djangoをゆぴと共に学習してみませんか?
 date: 2020-12-05
+cover: '/image/cover/studydjango.webp'
 ---
 
 ## まずはじめに
