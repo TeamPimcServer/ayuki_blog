@@ -93,13 +93,13 @@ sudo choco install windows-terminal
 sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
-::: warning <i class="mdi mdi-alert-outline"></i>注意
+::: warning 
 何も気にせず乱用してはいけません。
 
 ウイルス等の感染の原因になります。
 :::
 
-::: danger <i class="mdi mdi-close-octagon"></i>警告
+::: danger
 ``rm``や``rd``(及び``rmdir``)などのファイルを削除するコマンドに対して``C:\``や``/``を指定してはいけません。(OSや個人データをを破壊する可能性があります。)
 :::
 
