@@ -226,3 +226,9 @@ minify:
     compress:
     exclude:
       - '**/*.min.js'
+
+lazyload:
+  enable: true
+  onlypost: false # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
