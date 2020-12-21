@@ -1095,6 +1095,10 @@ hexo-theme-landscape@^0.0.3:
   resolved "https://registry.yarnpkg.com/hexo-theme-landscape/-/hexo-theme-landscape-0.0.3.tgz#87d1f4d613da9be5245dad0d4b80479eab70d386"
   integrity sha512-b0Di+TUVs4ESrNX4ULEh9uQmADpO6kr10rIJ2OGZM8suNQNFKdxn+vJUjnLfKkCPJAfVmS7/S83KCNYe4tpoNw==
 
+"hexo-user-posts-count@git+https://github.com/yupix/hexo-user-posts-count.git":
+  version "0.0.0"
+  resolved "git+https://github.com/yupix/hexo-user-posts-count.git#0999972bcc466ed21ab5e04897e8115b407b1dec"
+
 hexo-util@^1.0.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-1.9.1.tgz#15dc10d0dca474c978cdba9c20e8d0417ac993de"
