@@ -61,19 +61,19 @@ bottomIcon:
 linksList:
   - {
     title: 'ゆぴ',
-    intro: '本サイトでのテンプレートのデザインに手を加えたり、独自のデザインを追加している人です。主にMinecraftServerを運営しています',
+    intro: '本サイトでのテンプレートのデザインに手を加えたり、独自のデザインやJavaScriptを追加している人です。他にはMinecraftServerを運営しています',
     link: 'https://ne.akarinext.org/@yupix',
     image: '/image/icon/yupix.webp'
   }
   - {
     title: 'あき',
-    intro: '主にMinecraftServerを運営しています',
+    intro: '主にAyuskeyの開発などを行っています。フロントエンドかバックエンド開発者かでいうとバックエンド開発者です。',
     link: 'https://xe.akirin.xyz/@aki',
     image: '/image/icon/aki.webp'
   }
   - {
     title: 'TeamPimcServer',
-    intro: '本blogの開発メンバーが運営しているチームです',
+    intro: '本Blogを運営しているチームのアカウントです。Blogに関する告知などはこのアカウントで行います。',
     link: 'https://discord.gg/CcT997U',
     image: '/image/icon/pimc-logo.svg'
   }
