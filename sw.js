@@ -19,7 +19,7 @@
 self.addEventListener('install', function () { return self.skipWaiting(); });
 self.addEventListener('active', function () { return self.clients.claim(); });
 
-toolbox.precache(['/','/2020/12/21/2020-12-21-misskey-advent-calendar-2020-ayuskey/','/2020/12/20/2020-12-20-yupix-diary/','/2020/12/20/2020-12-20-new-ayuki-blog/','/2020/12/05/2020-12-05-study-django/','/2020/12/05/2020-12-05-study-django1/']);
+toolbox.precache(['/','/2020/12/21/2020-12-21-progress-intsl-py/','/2020/12/21/2020-12-21-misskey-advent-calendar-2020-ayuskey/','/2020/12/20/2020-12-20-yupix-diary/','/2020/12/20/2020-12-20-new-ayuki-blog/','/2020/12/05/2020-12-05-study-django/']);
 toolbox.options = {"networkTimeoutSeconds":5};
 
 toolbox.router.any(/hm.baidu.com/, toolbox.networkOnly);
