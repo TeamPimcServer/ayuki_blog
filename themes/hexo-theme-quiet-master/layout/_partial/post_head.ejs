@@ -41,7 +41,9 @@
                     <p>この記事は<%- readingTime(page.content) %></p>
                 <div>
                     <p><%- fa_inline('clock', {prefix: 'far'}) %>公開日時: <%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
-                    <p><%- fa_inline('history', {prefix: 'fas'}) %>更新日時: <%= date(page.updated, "YYYY-MM-DD HH:mm:ss") %></p>
+                    <% if (page.date.format() !== page.updated.format()) {%>
+                        <p><%- fa_inline('history', {prefix: 'fas'}) %>更新日時: <%= date(page.updated, "YYYY-MM-DD HH:mm:ss") %></p>
+                    <% } %>
                 </div>
             </div>
         </div>
