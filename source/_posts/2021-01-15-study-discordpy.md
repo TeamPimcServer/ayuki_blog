@@ -1,5 +1,5 @@
 ---
-title: 書いて覚えるDiscord.py
+title: '書いて覚えるDiscord.py'
 categories: 一般
 author: 'ゆぴ'
 tags:
@@ -8,7 +8,7 @@ tags:
 - Python
 - discord.py
 - discord
-excerpt: discord.pyを実際に書いて覚えていきます。
+excerpt: 'discord.pyを実際に書いて覚えていきます。'
 date: 2021-01-15 11:59
 cover: '/image/cover/study-discord.py.svg'
 ---
