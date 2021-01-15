@@ -92,6 +92,11 @@ client.run('TOKENをここに')
 |message.content|メッセージの内容（こんにちはを送信したらこんにちは）が入っている|
 |message.channel.id|メッセージが送信されたチャンネルのIDが入ってる|
 
+## 参考
+以下の記事などを参考にさせていただきました。
+
+[公式ドキュメント](https://discordpy.readthedocs.io/)  
+[1ntegrale9様の記事](https://qiita.com/1ntegrale9/items/9d570ef8175cf178468f)
 
 ## 最後に
 
