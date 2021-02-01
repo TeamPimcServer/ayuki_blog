@@ -307,7 +307,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ayukisblog@workspace:."
   dependencies:
-    hexo: ^5.0.0
+    hexo: ^5.3.0
     hexo-cookieconsent: ^1.0.0
     hexo-deployer-git: ^2.1.0
     hexo-filter-auto-crossorigin: ^1.0.1
@@ -322,7 +322,7 @@ __metadata:
     hexo-reading-time: "git+https://github.com/yupix/hexo-reading-time.git"
     hexo-renderer-ejs: ^1.0.0
     hexo-renderer-multi-markdown-it: ^0.1.5
-    hexo-renderer-stylus: ^2.0.0
+    hexo-renderer-stylus: ^2.0.1
     hexo-server: ^2.0.0
     hexo-theme-landscape: ^0.0.3
     hexo-user-posts-count: "git+https://github.com/yupix/hexo-user-posts-count.git#main"
@@ -1841,7 +1841,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hexo-renderer-stylus@npm:^2.0.0":
+"hexo-renderer-stylus@npm:^2.0.1":
   version: 2.0.1
   resolution: "hexo-renderer-stylus@npm:2.0.1"
   dependencies:
@@ -1916,7 +1916,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hexo@npm:^5.0.0":
+"hexo@npm:^5.3.0":
   version: 5.3.0
   resolution: "hexo@npm:5.3.0"
   dependencies:
