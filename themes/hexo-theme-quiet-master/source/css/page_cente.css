@@ -151,12 +151,15 @@
     margin: 10px 16px;
 }
 
+strong {
+    color: #5a5a5a !important;
+}
+
 #article ul li:before {
     content: "\2022";
     color: #006aff;
     float: left;
     margin-right: 10px;
-    line-height: 31px;
     font-size: 18px;
     font-weight: 500;
 }
