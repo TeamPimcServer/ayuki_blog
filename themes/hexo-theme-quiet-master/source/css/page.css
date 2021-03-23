@@ -185,13 +185,13 @@
     text-decoration: none
 }
 
-.Last-Next a, .Last-Next a .last {
+.Last-Next a, .Last-Next a .last, .Last-Next .none-last {
     display: flex;
     flex-grow: 1;
     flex-basis: 0
 }
 
-.Last-Next a .last {
+.Last-Next a .last, .Last-Next .none-last {
     height: 150px;
     border-radius: 10px;
     background-size: 100% 100%;
@@ -203,20 +203,21 @@
     flex-direction: column
 }
 
-.Last-Next a .last:hover {
+.Last-Next a .last:hover, .Last-Next .none-last:hover {
     margin-top: -10px;
     box-shadow: 0 10px 40px 0 rgba(50, 50, 50, .1);
     opacity: .7
 }
 
-.Last-Next a .last span, p {
+
+.Last-Next a .last span, p, .Last-Next .none-last span {
     margin-right: 10px;
     margin-left: 10px;
     font-size: 90%;
     line-height: 1.6
 }
 
-.Last-Next a .last p {
+.Last-Next a .last p, .Last-Next .none-last {
     font-size: 16px
 }
 
