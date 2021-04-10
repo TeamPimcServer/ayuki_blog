@@ -48,6 +48,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@teampimcserver/hexo-deployer-git@npm:^3.0.0-path1":
+  version: 3.0.0-path1
+  resolution: "@teampimcserver/hexo-deployer-git@npm:3.0.0-path1"
+  dependencies:
+    bluebird: ^3.5.0
+    chalk: ^4.0.0
+    hexo-fs: ^3.0.1
+    hexo-util: ^2.4.0
+    moment: ^2.18.0
+    nunjucks: ^3.2.1
+  checksum: 331b065b90c557d3151ae84092da3ef2234c7c64af5a43c3e100b6c7a9df7dc399e380ac246767949a690bfe74988ef589976b46281b8ed65decd0c0e2da6f0f
+  languageName: node
+  linkType: hard
+
+"@teampimcserver/hexo-pwa@npm:^0.1.3-path2":
+  version: 0.1.3-path2
+  resolution: "@teampimcserver/hexo-pwa@npm:0.1.3-path2"
+  dependencies:
+    lodash.template: ^4.5.0
+  checksum: d5fed30205ce48ab466f9722109e1520d53899cfbfbff04308a91677bd6aa79c74f97f5188ee8c1bb640c7442a8e9690cd0b019525af4c092a36ab6e1f58c70e
+  languageName: node
+  linkType: hard
+
+"@teampimcserver/hexo-reading-time@npm:^1.0.3-path1":
+  version: 1.0.3-path1
+  resolution: "@teampimcserver/hexo-reading-time@npm:1.0.3-path1"
+  dependencies:
+    html-to-text: ^2.1.3
+    word-count: ^0.2.2
+  checksum: b55ee4787b4a350d7f715b5f8249d3b36a3a375ac57c4931a52b2e0bbf55b66ee47b0297ca25dbce39c30b3293a4e36ac8adbde3ea4a1b9bf4e3d8cadabe1c44
+  languageName: node
+  linkType: hard
+
+"@teampimcserver/hexo-toc@npm:^1.1.0-path2":
+  version: 1.1.0-path2
+  resolution: "@teampimcserver/hexo-toc@npm:1.1.0-path2"
+  dependencies:
+    cheerio: ^0.19.0
+    markdown-toc: ^0.12.12
+    object-assign: ^4.0.1
+    transliteration: ^1.1.7
+    uslug: ^1.0.3
+  checksum: 52f5168223bbb6ccd34a1d5f08783b9f18411f212c2dc9c96892b1caa55a1c64190522c247f8a32d2687c9912efc5dfda10e87646441f38574724e7c42c53a2f
+  languageName: node
+  linkType: hard
+
+"@teampimcserver/hexo-user-posts-count@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@teampimcserver/hexo-user-posts-count@npm:1.0.0"
+  checksum: b02e82aa6094593327ac2f758b239023ca085a25acf3ed400e16fa76f8a373beee7e5c04f341dfc9f7f8f2336565de4ab5f321f5e597681cef1eb6c5d3f93f94
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 14.14.35
   resolution: "@types/node@npm:14.14.35"
@@ -348,9 +401,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ayukisblog@workspace:."
   dependencies:
-    hexo: ^5.3.0
+    "@teampimcserver/hexo-deployer-git": ^3.0.0-path1
+    "@teampimcserver/hexo-pwa": ^0.1.3-path2
+    "@teampimcserver/hexo-reading-time": ^1.0.3-path1
+    "@teampimcserver/hexo-toc": ^1.1.0-path2
+    "@teampimcserver/hexo-user-posts-count": ^1.0.0
+    hexo: ^5.4.0
     hexo-cookieconsent: ^1.0.0
-    hexo-deployer-git: "git+https://github.com/yupix/hexo-deployer-git.git"
     hexo-filter-auto-crossorigin: ^1.0.1
     hexo-filter-optimize: ^0.3.1
     hexo-fontawesome: ^2.2.1
@@ -358,16 +415,12 @@ __metadata:
     hexo-generator-category: ^1.0.0
     hexo-generator-index: ^2.0.0
     hexo-generator-tag: ^1.0.0
-    hexo-lazyload-image: ^1.0.9
-    hexo-pwa: "git+https://github.com/yupix/hexo-pwa.git"
-    hexo-reading-time: "git+https://github.com/yupix/hexo-reading-time.git"
+    hexo-lazyload-image: ^1.0.10
     hexo-renderer-ejs: ^1.0.0
     hexo-renderer-multi-markdown-it: ^0.1.5
     hexo-renderer-stylus: ^2.0.1
     hexo-server: ^2.0.0
     hexo-theme-landscape: ^0.0.3
-    hexo-toc: "https://github.com/yukiyalien/hexo-toc.git"
-    hexo-user-posts-count: "git+https://github.com/yupix/hexo-user-posts-count.git#main"
     markdown-it-container: ^3.0.0
     markdown-it-emoji: ^2.0.0
     markdown-it-footnote: ^3.0.2
@@ -1911,20 +1964,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hexo-deployer-git@git+https://github.com/yupix/hexo-deployer-git.git":
-  version: 3.0.0
-  resolution: "hexo-deployer-git@https://github.com/yupix/hexo-deployer-git.git#commit=d908f1c0262bd6207d3848682fe7efcb3533275a"
-  dependencies:
-    bluebird: ^3.5.0
-    chalk: ^4.0.0
-    hexo-fs: ^3.0.1
-    hexo-util: ^2.4.0
-    moment: ^2.18.0
-    nunjucks: ^3.2.1
-  checksum: 9d127f5f8ee961bc444ced2a03995d039dff2c448a98fafe57224e200785cc0e992df5bef26f1094bb73263d1713dc62c40d48a2dbea2feed357dcb9905a0f5c
-  languageName: node
-  linkType: hard
-
 "hexo-filter-auto-crossorigin@npm:^1.0.1":
   version: 1.0.1
   resolution: "hexo-filter-auto-crossorigin@npm:1.0.1"
@@ -2031,7 +2070,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hexo-lazyload-image@npm:^1.0.9":
+"hexo-lazyload-image@npm:^1.0.10":
   version: 1.0.10
   resolution: "hexo-lazyload-image@npm:1.0.10"
   dependencies:
@@ -2053,25 +2092,6 @@ fsevents@~2.3.1:
   version: 1.0.0
   resolution: "hexo-pagination@npm:1.0.0"
   checksum: 6b2bc110d52df7f173781791678df8dbf865fc1ea65be2664b5cef0f182053920cef5a348b9348fb563d2e3981afce79847834e6e3908e5d1d2f7e9d242f4ba4
-  languageName: node
-  linkType: hard
-
-"hexo-pwa@git+https://github.com/yupix/hexo-pwa.git":
-  version: 0.1.3-path1
-  resolution: "hexo-pwa@https://github.com/yupix/hexo-pwa.git#commit=87f33d0b9b6bd28868469da97ea2afe4fa9ee867"
-  dependencies:
-    lodash.template: ^4.5.0
-  checksum: ddde55b6f920043f19907eb2e5b18166cd1726842689597038d25795dd9f43b0fce3b500c5dcfc582366d2abe84cf589a531a517a779f7174ffca28021a0fe6e
-  languageName: node
-  linkType: hard
-
-"hexo-reading-time@git+https://github.com/yupix/hexo-reading-time.git":
-  version: 1.0.3
-  resolution: "hexo-reading-time@https://github.com/yupix/hexo-reading-time.git#commit=7c91145a5267db6da4df35876e3c796427870e3b"
-  dependencies:
-    html-to-text: ^2.1.3
-    word-count: ^0.2.2
-  checksum: ba8dd4b3d1105f141a720c8a009419d736493eaaac979c8f855953383cafa84e895c25ee9e2c642fccf23033a7d69e2d67ae94c68ae0042b06c0021b98f667c3
   languageName: node
   linkType: hard
 
@@ -2152,26 +2172,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hexo-toc@https://github.com/yukiyalien/hexo-toc.git":
-  version: 1.1.0
-  resolution: "hexo-toc@https://github.com/yukiyalien/hexo-toc.git#commit=7a199af9e5fbcaa965f91b452f5eb5890fb6783f"
-  dependencies:
-    cheerio: ^0.19.0
-    markdown-toc: ^0.12.12
-    object-assign: ^4.0.1
-    transliteration: ^1.1.7
-    uslug: ^1.0.3
-  checksum: 92bccad95fb984638a2162df0c6b17c4e84d7dcbd51c3572831c84295441c286a523e33bf9bfbe405ed0720ce74499605acccf53882ab3ed900794aec71ebe99
-  languageName: node
-  linkType: hard
-
-"hexo-user-posts-count@git+https://github.com/yupix/hexo-user-posts-count.git#main":
-  version: 1.0.0
-  resolution: "hexo-user-posts-count@https://github.com/yupix/hexo-user-posts-count.git#commit=c3088cce28faecb6b0d70b49ba8187e4cf8f30e9"
-  checksum: 789d5b40e24ef17d2906b1793a6b2523a8a04c4fe7042bc8627a911569dd087e68fd949a737b12653d3f5f8b893218e5eccd1b86d1b2b8fa3cfe6d1b9b7e1f7c
-  languageName: node
-  linkType: hard
-
 "hexo-util@npm:^2.0.0, hexo-util@npm:^2.4.0":
   version: 2.4.0
   resolution: "hexo-util@npm:2.4.0"
@@ -2189,7 +2189,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hexo@npm:^5.3.0":
+"hexo@npm:^5.4.0":
   version: 5.4.0
   resolution: "hexo@npm:5.4.0"
   dependencies:
@@ -4861,9 +4861,9 @@ fsevents@~2.3.1:
   linkType: hard
 
 "underscore@npm:^1.8.3":
-  version: 1.12.1
-  resolution: "underscore@npm:1.12.1"
-  checksum: b53ae924fe3608ac7875a0eec20988611a02dc174bad40680dbb9fe994c40fc457b6d4f618f8b9af930c31549809c27f70dddccd83957a32bab27b1eea858c1b
+  version: 1.13.0
+  resolution: "underscore@npm:1.13.0"
+  checksum: 8a10d1ff0a7923549b4cddd3aad5c801eab574b515e7d66208cc95542be2a1f4bf149e3ba1b955ac7da938d0a4179f2221d082660bb54c6a694f655caa65aab5
   languageName: node
   linkType: hard
 
