@@ -42,8 +42,7 @@
                 <div>
                     <p><%- fa_inline('clock', {prefix: 'far'}) %>公開: <%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
                     <% if (page.date.format() !== page.updated.format()) { %>
-                        <p><%- fa_inline('history', {prefix: 'fas'}) %>
-                            更新: <%= date(page.updated, "YYYY-MM-DD HH:mm:ss") %></p>
+                        <p><%- fa_inline('history', {prefix: 'fas'}) %>更新: <%= date(page.updated, "YYYY-MM-DD HH:mm:ss") %></p>
                     <% } %>
                 </div>
             </div>
