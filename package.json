@@ -30,6 +30,7 @@
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
+    "hexo-toc": "https://github.com/yukiyalien/hexo-toc.git",
     "hexo-user-posts-count": "git+https://github.com/yupix/hexo-user-posts-count.git#main",
     "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^2.0.0",
