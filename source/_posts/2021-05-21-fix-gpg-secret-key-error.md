@@ -1,5 +1,5 @@
 ---
-title: 'ゆぴの日記 4月号'
+title: 'gpgが動かなくなった話'
 categories: 日記
 author: 'ゆぴ'
 tags:
