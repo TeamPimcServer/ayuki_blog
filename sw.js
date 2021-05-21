@@ -19,7 +19,7 @@
 self.addEventListener('install', function () { return self.skipWaiting(); });
 self.addEventListener('active', function () { return self.clients.claim(); });
 
-toolbox.precache(['/','/2021/04/10/2021-04-10-recent-status-report/','/2021/03/23/2021-03-23-hexo-pwa-plugin-not-working/','/2021/02/02/2021-02-02-issue-management-tool/','/2021/01/15/2021-01-15-study-discordpy/','/2020/12/21/2020-12-21-progress-intsl-py/']);
+toolbox.precache(['/','/2021/05/21/2021-05-21-fix-gpg-secret-key-error/','/2021/04/10/2021-04-10-recent-status-report/','/2021/03/23/2021-03-23-hexo-pwa-plugin-not-working/','/2021/02/02/2021-02-02-issue-management-tool/','/2021/01/15/2021-01-15-study-discordpy/']);
 toolbox.options = {"networkTimeoutSeconds":5};
 
 toolbox.router.any("/hm.baidu.com/", toolbox.networkOnly);
